@@ -87,3 +87,520 @@ body {
   background-repeat: no-repeat;
   background-size: cover; */
 }
+
+@media only screen and (max-width: 320px){
+  .hfc-logo {
+    width: 45px;
+    height: 40px;
+  }
+
+  .bankofbaroda-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .kontikifinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .fdb-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .merchantfinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .creditcorporation-logo {
+    width: 50px;
+    height: 20px;
+  }
+
+  .utof-logo {
+    width: 50px;
+    height: 20px;
+  }
+
+  .ha-logo {
+    width: 50px;
+    height: 20px;
+  }
+
+  .fnpf-logo {
+    width: 50px;
+    height: 20px;
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .hfc-logo {
+    width: 45px;
+    height: 40px;
+  }
+
+  .bankofbaroda-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .kontikifinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .fdb-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .merchantfinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .creditcorporation-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .utof-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .ha-logo {
+    width: 70px;
+    height: 50px;
+  }
+
+  .fnpf-logo {
+    width: 70px;
+    height: 45px;
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .hfc-logo {
+    width: 45px;
+    height: 40px;
+  }
+
+  .bankofbaroda-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .kontikifinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .fdb-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .merchantfinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .creditcorporation-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .utof-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .ha-logo {
+    width: 70px;
+    height: 50px;
+  }
+
+  .fnpf-logo {
+    width: 70px;
+    height: 45px;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  .hfc-logo {
+    width: 45px;
+    height: 40px;
+  }
+
+  .bankofbaroda-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .kontikifinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .fdb-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .merchantfinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .creditcorporation-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .utof-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .ha-logo {
+    width: 70px;
+    height: 50px;
+  }
+
+  .fnpf-logo {
+    width: 70px;
+    height: 45px;
+  }
+}
+
+@media only screen and (min-width: 481px){
+  .hfc-logo {
+    width: 45px;
+    height: 40px;
+  }
+
+  .bankofbaroda-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .kontikifinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .fdb-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .merchantfinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .creditcorporation-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .utof-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .ha-logo {
+    width: 70px;
+    height: 50px;
+  }
+
+  .fnpf-logo {
+    width: 70px;
+    height: 45px;
+  }
+}
+
+@media only screen and (max-width: 575px){
+  .hfc-logo {
+    width: 45px;
+    height: 40px;
+  }
+
+  .bankofbaroda-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .kontikifinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .fdb-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .merchantfinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .creditcorporation-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .utof-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .ha-logo {
+    width: 70px;
+    height: 50px;
+  }
+
+  .fnpf-logo {
+    width: 70px;
+    height: 45px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .hfc-logo {
+    width: 45px;
+    height: 40px;
+  }
+
+  .bankofbaroda-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .kontikifinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .fdb-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .merchantfinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .creditcorporation-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .utof-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .ha-logo {
+    width: 70px;
+    height: 50px;
+  }
+
+  .fnpf-logo {
+    width: 70px;
+    height: 45px;
+  }
+}
+
+@media only screen and (max-width: 979px){
+  .hfc-logo {
+    width: 45px;
+    height: 40px;
+  }
+
+  .bankofbaroda-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .kontikifinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .fdb-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .merchantfinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .creditcorporation-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .utof-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .ha-logo {
+    width: 70px;
+    height: 50px;
+  }
+
+  .fnpf-logo {
+    width: 70px;
+    height: 45px;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  .hfc-logo {
+    width: 45px;
+    height: 40px;
+  }
+
+  .bankofbaroda-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .kontikifinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .fdb-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .merchantfinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .creditcorporation-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .utof-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .ha-logo {
+    width: 70px;
+    height: 50px;
+  }
+
+  .fnpf-logo {
+    width: 70px;
+    height: 45px;
+  }
+}
+
+@media only screen  and (max-width: 1199px){
+  .hfc-logo {
+    width: 45px;
+    height: 40px;
+  }
+
+  .bankofbaroda-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .kontikifinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .fdb-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .merchantfinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .creditcorporation-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .utof-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .ha-logo {
+    width: 70px;
+    height: 50px;
+  }
+
+  .fnpf-logo {
+    width: 70px;
+    height: 45px;
+  }
+}
+
+@media only screen  and (max-width: 2000px){
+  .hfc-logo {
+    width: 45px;
+    height: 40px;
+  }
+
+  .bankofbaroda-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .kontikifinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .fdb-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .merchantfinance-logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .creditcorporation-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .utof-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .ha-logo {
+    width: 70px;
+    height: 50px;
+  }
+
+  .fnpf-logo {
+    width: 70px;
+    height: 45px;
+  }
+}
