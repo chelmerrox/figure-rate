@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--CSS Resets-->
+    <link href="styles/resets.css" type="text/css" rel="stylesheet"/>
+    <!--Bootstrap 5 link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Bootstrap 2.3.2 for Datepicker-->
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
+    <!--Custom CSS stylesheet-->
+    <link href="styles/investment.css" type="text/css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--Google Web Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Monoton&display=swap" rel="stylesheet">
+    <!--Custom JavaScript file-->
+    <script src="scripts/investment.js" defer></script>
+    <title>Figure ▫ Investment Interest Rates</title>
+  </head>
+
+  <body class="container-fluid">
+    <!--Navbar for sm, md screens-->
+    <nav class="row navbar navbar-light d-flex d-sm-flex d-md-flex d-lg-none d-xl-none d-xxl-none flex-row flex-sm-row flex-md-row justify-content-between justify-content-sm-between justify-content-md-between shadow-sm bg-white sticky-top">
+      <!--Hamburger icon & Figure (Name of the website)-->  
+      <div class="col-9 col-sm-9 col-md-9">
+        <!--Hamburger Icon for sm, md devices-->
+        <div class="d-inline-flex d-sm-inline-flex d-md-inline-flex flex-row flex-sm-row flex-md-row justify-content-between justify-content-sm-between justify-content-md-between">
+          <div>
+            <button class="navbar-toggler border-0 mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+              <ul class="d-flex d-sm-flex d-md-flex d-lg-none d-xl-none d-xxl-none flex-column flex-sm-column flex-md-column align-items-center align-items-sm-center align-items-md-center">
+                <li class="mb-2"><a href="investment.html" class="text-decoration-none lavender-font-color fw-bold josefin-sans-font">Investment</a></li>
+                <li class="mb-2"><a href="" class="text-decoration-none lavender-font-color fw-bold josefin-sans-font">Banking</a></li>
+                <li class="mb-2"><a href="" class="text-decoration-none lavender-font-color fw-bold josefin-sans-font">Mortgages</a></li>
+                <li class="mb-2"><a href="" class="text-decoration-none lavender-font-color fw-bold josefin-sans-font">Loans</a></li>
+                <li class="mb-2"><a href="" class="text-decoration-none lavender-font-color fw-bold josefin-sans-font">Credit & Debit Cards</a></li>
+                <li class="mb-2"><a href="" class="text-decoration-none lavender-font-color fw-bold josefin-sans-font">Home Equity</a></li>
+                <li class="mb-2"><a href="" class="text-decoration-none lavender-font-color fw-bold josefin-sans-font">Insurance</a></li>
+                <li class="mb-2"><a href="" class="text-decoration-none lavender-font-color fw-bold josefin-sans-font">Retirement</a></li>
+                <li class="mb-2 button-gradient p-2 rounded"><a href="" class="text-decoration-none fw-bold p-2 josefin-sans-font text-white">Sign in</a></li>
+                <li class="mb-2">
+                  <form action="" method="get">
+                    <input type="text" placeholder="Search" name="search" class="josefin-sans-font border border-secondary rounded-pill shadow-sm p-2">
+      
+                    <button type="submit" class="border border-secondary rounded p-2">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                      </span>
+                    </button>
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!--Figure | Name of website-->
+          <a href="figure.html" class="fw-bold fs-4 monoton-font font-gradient">Figure</a>
+        </div>
+      </div>
+
+      <!--Create Account button & Search Icon-->
+      <div class="col-3 col-sm-3 col-md-3 d-flex d-sm-flex d-md-flex flex-row flex-sm-row flex-md-row justify-content-between justify-content-sm-between justify-content-md-between">
+        <div class="border-gradient create-account-border">
+          <a href="" class="josefin-sans-font text-black-50 create-account text-decoration-none fw-bold">Create Account</a>
+        </div>
+      </div>
+    </nav>
+
+    <!--Navbar for lg, xl, xxl screens-->
+    <nav class="row navbar d-none d-sm-none d-md-none d-lg-flex d-xl-flex d-xxl-flex flex-lg-row flex-xl-row flex-xxl-row justify-content-lg-between justify-content-xl-between justify-content-xxl-between shadow-sm bg-white sticky-top">
+      <!--Figure | Name of website-->
+      <a href="figure.html" class="col-lg-1 col-xl-1 col-xxl-1 fw-bold fs-5 monoton-font font-gradient">Figure</a>
+
+      <div class="col-lg-6 col-xl-6 col-xxl-6">
+        <ul class="d-lg-flex d-xl-flex d-xxl-flex flex-lg-row flex-xl-row flex-xxl-row justify-content-lg-between justify-content-xl-between justify-content-xxl-between mt-3">
+          <li class="me-2"><a href="investment.html" class="text-decoration-none lavender-font-color fw-bold josefin-sans-font">Investment</a></li>
+          <li class="me-2"><a href="" class="text-decoration-none lavender-font-color fw-bold josefin-sans-font">Banking</a></li>
+          <li class="me-2"><a href="" class="text-decoration-none lavender-font-color fw-bold josefin-sans-font">Mortgages</a></li>
+          <li class="me-2"><a href="" class="text-decoration-none lavender-font-color fw-bold josefin-sans-font">Loans</a></li>
+          <li class="me-2"><a href="" class="text-decoration-none lavender-font-color fw-bold josefin-sans-font">Credit & Debit Cards</a></li>
+          <li class="me-2"><a href="" class="text-decoration-none lavender-font-color fw-bold josefin-sans-font">Home Equity</a></li>
+          <li class="me-2"><a href="" class="text-decoration-none lavender-font-color fw-bold josefin-sans-font">Insurance</a></li>
+          <li><a href="" class="text-decoration-none lavender-font-color fw-bold josefin-sans-font">Retirement</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-5 col-xl-5 col-xxl-5">
+        <ul class="d-lg-inline-flex d-xl-inline-flex d-xxl-inline-flex mt-3">
+          <li class="me-2 mt-2">
+            <form action="" method="get">
+              <input type="text" placeholder="Search" name="search" class="josefin-sans-font border border-secondary rounded-pill shadow-sm p-2">
+  
+              <button type="submit" class="border border-secondary rounded-pill p-2">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg>
+                </span>
+              </button>
+            </form>
+          </li>
+
+          <li class="me-2 button-gradient p-2 rounded"><a href="" class="text-decoration-none fw-bold p-2 josefin-sans-font text-white">Sign in</a></li>
+        
+          <li class="border-gradient create-account-border"><a href="" class="josefin-sans-font text-black-50 create-account text-decoration-none fw-bold">Create Account</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="row mt-5">
+      <h1 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-black-50 text-center josefin-sans-font fw-bolder">Retail Term Deposit - Fixed Rate Term Interest Rates</h1>
+    
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+        <form action="" method="GET" class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex flex-column flex-sm-column flex-md-column flex-lg-column flex-xl-column flex-xxl-column align-items-center align-items-sm-center align-items-md-center align-items-lg-center align-items-xl-center align-items-xxl-center">
+          <label for="datepicker" class="text-center josefin-sans-font text-black-50 fs-4 fw-bolder mt-5">Choose term range/period, month & year to compare the interest rates:</label>
+          <select name="term-range" class="p-1 fs-5 josefin-sans-font mt-3 shadow-sm">
+            <option value="choose-term-ranges">Choose a term range</option> 
+            <option value="all-term-ranges">---All---</option> 
+            <option value="1-month">1 Month</option>
+            <option value="3-months">3 Months</option>
+            <option value="6-months">6 Months</option>
+            <option value="9-months">9 Months</option>
+            <option value="12-months">12 Months</option>
+            <option value="15-months">15 Months</option>
+            <option value="18-months">18 Months</option>
+            <option value="24-months">20 Months</option>
+            <option value="36-months">36 Months</option>
+            <option value="48-months">48 Months</option>
+            <option value="60-months">60 Months</option>
+            <option value="72-months">72 Months</option>
+            <option value="84-months">84 Months</option>
+            <option value="96-months">96 Months</option>
+            <option value="108-months">108 Months</option>
+            <option value="120-months">120 Months</option>
+            <option value="13-months">13 Month Retirees Term Deposit</option>
+          </select>
+          <input type="text" class="form-control p-4 fs-5 josefin-sans-font mt-3 shadow-sm" placeholder="Choose a Month & Year" name="datepicker" id="datepicker"/>
+          
+          <p class="josefin-sans-font text-black-50 fs-4 fw-bolder mt-4">Best interest rates for:</p>
+          
+          <div class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex flex-row flex-sm-row flex-md-row flex-lg-row flex-xl-row flex-xxl-row justify-content-between justify-content-sm-between justify-content-md-between justify-content-lg-between justify-content-xl-between justify-content-xxl-between">
+            <input type="radio" class="me-2" id="deposit" name="lending-or-deposit" value="Deposit">
+            <label for="deposit" class="josefin-sans-font text-black-50 fs-5 fw-bolder me-2">Deposits</label>
+            <input type="radio" id="lending" class="me-2" name="lending-or-deposit" value="Lending">
+            <label for="lending" class="josefin-sans-font text-black-50 fs-5 fw-bolder">Lending</label>
+          </div>
+
+          <input type="submit" class="border-0 rounded p-3 button-gradient text-white josefin-sans-font fs-4 fw-bold shadow-sm mt-3" value="Find Rates">
+        </form>
+      </div>
+
+      <!--List of the interest rates for the current month and year e.g December (12th month) and interest rates for the 12th month-->
+      <section class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 border bg-light-grey p-5 interest-rates">
+        <h3 class="text-center josefin-sans-font fw-bolder mb-4">Interest Rates for <span class="term-range">All Term Ranges</span> in <span class="month">December </span><span class="year">2021</span></h3>
+        <ul class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex flex-column flex-sm-column flex-md-column flex-lg-column flex-xl-column flex-xxl-column align-items-center align-items-sm-center align-items-md-center align-items-lg-center align-items-xl-center align-items-xxl-center">
+          <li class="rounded shadow-sm p-2 bg-white d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex-row flex-sm-row flex-md-row flex-lg-row flex-xl-row flex-xxl-row justify-content-between justify-content-sm-between justify-content-md-between justify-content-lg-between justify-content-xl-between justify-content-xxl-between hfc-interest-rate">
+            <p class="fw-bolder fs-5 text-dark josefin-sans-font text-center m-5">HFC Bank</p>
+
+            <!--Minimum opening deposit, Minimum operating balance, Maximum opening deposit-->
+            <div class="mx-2 my-3 px-3 text-center">
+              <p class="text-black-50 fw-bold josefin-sans-font">Minimum Opening Deposit: $500</p>
+              <p class="text-black-50 fw-bold josefin-sans-font">Maximum Opening Deposit: $250,000 </p>
+              <p class="text-black-50 fw-bold josefin-sans-font">Minimum Operating Balance: - </p>
+            </div>
+
+            <div class="mx-2 my-3 text-center">
+              <p class="fs-5 text-dark fw-bold josefin-sans-font text-center">Interest rate</p>
+              <p class="fs-2 text-black-50 fw-bold josefin-sans-font text-center my-5">1%</p>
+            </div>
+          </li>
+          <li class="rounded shadow-sm p-2 bg-white d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex-row flex-sm-row flex-md-row flex-lg-row flex-xl-row flex-xxl-row justify-content-between justify-content-sm-between justify-content-md-between justify-content-lg-between justify-content-xl-between justify-content-xxl-between bredbank-interest-rate mt-3">
+            <p class="fw-bolder fs-5 text-dark josefin-sans-font text-center m-5">BRED Bank</p>
+
+            <!--Minimum opening deposit, Minimum operating balance, Maximum opening deposit-->
+            <div class="mx-2 my-3 text-center">
+              <p class="text-black-50 fw-bold josefin-sans-font">Minimum Opening Deposit: $1,000</p>
+              <p class="text-black-50 fw-bold josefin-sans-font">Maximum Opening Deposit: $200,000</p>
+              <p class="text-black-50 fw-bold josefin-sans-font">Minimum Operating Balance: - </p>
+            </div>
+
+            <div class="mx-2 my-3 text-center">
+              <p class="fs-5 text-dark fw-bold josefin-sans-font text-center">Interest rate</p>
+              <p class="fs-2 text-black-50 fw-bold josefin-sans-font text-center my-5">0.75%</p>
+            </div>
+          </li>
+          <li class="rounded shadow-sm p-2 bg-white d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex-row flex-sm-row flex-md-row flex-lg-row flex-xl-row flex-xxl-row justify-content-between justify-content-sm-between justify-content-md-between justify-content-lg-between justify-content-xl-between justify-content-xxl-between bankofbaroda-interest-rate mt-3">
+            <p class="fw-bolder fs-5 text-dark josefin-sans-font text-center m-5">Bank of Baroda</p>
+
+            <!--Minimum opening deposit, Minimum operating balance, Maximum opening deposit-->
+            <div class="mx-2 my-3 text-center">
+              <p class="text-black-50 fw-bold josefin-sans-font">Minimum Opening Deposit: $500</p>
+              <p class="text-black-50 fw-bold josefin-sans-font">Maximum Opening Deposit: - </p>
+              <p class="text-black-50 fw-bold josefin-sans-font">Minimum Operating Balance: - </p>
+            </div>
+
+            <div class="mx-2 my-3 text-center">
+              <p class="fs-5 text-dark fw-bold josefin-sans-font text-center">Interest rate</p>
+              <p class="fs-2 text-black-50 fw-bold josefin-sans-font text-center my-5">0.6%</p>
+            </div>
+          </li>
+          <li class="rounded shadow-sm p-2 bg-white d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex-row flex-sm-row flex-md-row flex-lg-row flex-xl-row flex-xxl-row justify-content-between justify-content-sm-between justify-content-md-between justify-content-lg-between justify-content-xl-between justify-content-xxl-between anz-interest-rate mt-3">
+            <p class="fw-bolder fs-5 text-dark josefin-sans-font text-center m-5">ANZ</p>
+
+            <!--Minimum opening deposit, Minimum operating balance, Maximum opening deposit-->
+            <div class="mx-2 my-3 text-center">
+              <p class="text-black-50 fw-bold josefin-sans-font">Minimum Opening Deposit: $500</p>
+              <p class="text-black-50 fw-bold josefin-sans-font">Maximum Opening Deposit: - </p>
+              <p class="text-black-50 fw-bold josefin-sans-font">Minimum Operating Balance: - </p>
+            </div>
+
+            <div class="mx-2 my-3 text-center">
+              <p class="fs-5 text-dark fw-bold josefin-sans-font text-center">Interest rate</p>
+              <p class="fs-2 text-black-50 fw-bold josefin-sans-font text-center my-5">0.5%</p>
+            </div>
+          </li>
+          <li class="rounded shadow-sm p-2 bg-white d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex-row flex-sm-row flex-md-row flex-lg-row flex-xl-row flex-xxl-row justify-content-between justify-content-sm-between justify-content-md-between justify-content-lg-between justify-content-xl-between justify-content-xxl-between westpac-interest-rate mt-3">
+            <p class="fw-bolder fs-5 text-dark josefin-sans-font text-center m-5">Westpac</p>
+
+            <!--Minimum opening deposit, Minimum operating balance, Maximum opening deposit-->
+            <div class="mx-2 my-3 text-center">
+              <p class="text-black-50 fw-bold josefin-sans-font">Minimum Opening Deposit: $1,000</p>
+              <p class="text-black-50 fw-bold josefin-sans-font">Maximum Opening Deposit: - </p>
+              <p class="text-black-50 fw-bold josefin-sans-font">Minimum Operating Balance: - </p>
+            </div>
+
+            <div class="mx-2 my-3 text-center">
+              <p class="fs-5 text-dark fw-bold josefin-sans-font text-center">Interest rate</p>
+              <p class="fs-2 text-black-50 fw-bold josefin-sans-font text-center my-5">0.5%</p>
+            </div>
+          </li>
+          <li class="rounded shadow-sm p-2 bg-white d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex-row flex-sm-row flex-md-row flex-lg-row flex-xl-row flex-xxl-row justify-content-between justify-content-sm-between justify-content-md-between justify-content-lg-between justify-content-xl-between justify-content-xxl-between bsp-interest-rate mt-3">
+            <p class="fw-bolder fs-5 text-dark josefin-sans-font text-center m-5">BSP</p>
+
+            <!--Minimum opening deposit, Minimum operating balance, Maximum opening deposit-->
+            <div class="mx-2 my-3 text-center">
+              <p class="text-black-50 fw-bold josefin-sans-font">Minimum Opening Deposit: $1,000</p>
+              <p class="text-black-50 fw-bold josefin-sans-font">Maximum Opening Deposit: $200,000</p>
+              <p class="text-black-50 fw-bold josefin-sans-font">Minimum Operating Balance: $1,000</p>
+            </div>
+
+            <div class="mx-2 my-3 text-center">
+              <p class="fs-5 text-dark fw-bold josefin-sans-font text-center">Interest rate</p>
+              <p class="fs-2 text-black-50 fw-bold josefin-sans-font text-center my-5">0.5%</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <div class="row p-3 button-gradient">
+      <!--Figure | Name of website-->
+      <a href="figure.html" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 fw-bold fs-4 monoton-font text-white text-decoration-none">Figure</a>
+    </div>
+
+    <div class="row p-3 button-gradient">
+      <ul class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+        <li class="text-white fw-bold border border-white border-top-0 border-end-0 border-start-0 josefin-sans-font pb-1">About</li>
+        <li><a href="" class="text-decoration-none text-white josefin-sans-font mt-3">About us</a></li>
+        <li><a href="" class="text-decoration-none text-white josefin-sans-font mt-2">Careers</a></li>
+        <li><a href="" class="text-decoration-none text-white josefin-sans-font mt-2">Advertise with us</a></li>
+      </ul>
+
+      <ul class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+        <li class="text-white fw-bold border border-white border-top-0 border-end-0 border-start-0 josefin-sans-font pb-1">Help</li>
+        <li><a href="" class="text-decoration-none text-white josefin-sans-font mt-3">Contact us</a></li>
+        <li><a href="" class="text-decoration-none text-white josefin-sans-font mt-2">Compare rates</a></li>
+        <li><a href="" class="text-decoration-none text-white josefin-sans-font mt-2">Glossary</a></li>
+        <li><a href="" class="text-decoration-none text-white josefin-sans-font mt-2">FAQs</a></li>
+      </ul>
+
+      <ul class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+        <li class="text-white fw-bold border border-white border-top-0 border-end-0 border-start-0 josefin-sans-font pb-1">Legal</li>
+        <li><a href="" class="text-decoration-none text-white josefin-sans-font mt-3">Privacy policy</a></li>
+        <li><a href="" class="text-decoration-none text-white josefin-sans-font mt-2">Cookie settings</a></li>
+        <li><a href="" class="text-decoration-none text-white josefin-sans-font mt-2">Terms of use</a></li>
+      </ul>
+    </div>
+
+    <footer class="row p-3 bg-white">
+      <!--Social Media & Copyright Information-->
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xl-6">
+        <!--Social Media-->
+        <div class="d-flex d-sm-flex d-lg-flex flex-row flex-sm-row flex-md-row flex-lg-row flex-xl-row flex-xxl-row justify-content-start justify-content-sm-start justify-content-md-start justify-content-lg-start justify-content-xl-start justify-content-xxl-start">
+          <!--Facebook-->
+          <a href="" class="text-decoration-none me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="bi bi-facebook" viewBox="0 0 16 16">
+              <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#FA8BFF;stop-opacity:1" />
+                  <stop offset="52%" style="stop-color:#2BD2FF;stop-opacity:1" />
+                  <stop offset="90%" style="stop-color:#2BFF88;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" fill="url(#grad1)"/>
+            </svg>
+          </a>
+
+          <!--Instagram-->
+          <a href="" class="text-decoration-none me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-instagram" viewBox="0 0 16 16">
+              <defs>
+                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#FA8BFF;stop-opacity:1" />
+                  <stop offset="52%" style="stop-color:#2BD2FF;stop-opacity:1" />
+                  <stop offset="90%" style="stop-color:#2BFF88;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" fill="url(#grad2)"/>
+            </svg>
+          </a>
+
+          <!--Twitter-->
+          <a href="" class="text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-twitter" viewBox="0 0 16 16">
+              <defs>
+                <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#FA8BFF;stop-opacity:1" />
+                  <stop offset="52%" style="stop-color:#2BD2FF;stop-opacity:1" />
+                  <stop offset="90%" style="stop-color:#2BFF88;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" fill="url(#grad3)"/>
+            </svg>
+          </a>
+        </div>
+
+        <!--Copyright Information-->
+        <div class="d-flex d-sm-flex d-lg-flex flex-row flex-sm-row flex-md-row flex-lg-row flex-xl-row flex-xxl-row justify-content-start justify-content-sm-start justify-content-md-start justify-content-lg-start justify-content-xl-start justify-content-xxl-start mt-2">
+          <small class="text-black-50 fw-bold josefin-sans-font mt-2">&copy; <script>document.write(new Date().getFullYear());</script> Aver Labs. All Rights Reserved.</small>
+        </div>
+      </div>
+
+      <!--Figure | Website name & Fiji-->
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xl-6">
+        <ul>
+          <li><a href="figure.html" class="fw-bold fs-5 monoton-font font-gradient">Figure</a></li>
+          <li><a href="" class="text-black-50 text-decoration-none josefin-sans-font">Fiji</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!--Bootstrap 5 Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <!--Bootstrap 2.3.2 scripts for Datepicker-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
+  </body>
+</html>
