@@ -1,0 +1,41 @@
+.navbar-nav .nav-link.active {
+  color: #8c52ff !important;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-item:hover {
+  background-color: #f0f0f0;
+  font-weight: 500;
+}
+
+.btn-purple {
+  background-color: #8c52ff !important;
+  color: white !important;
+}
+
+.nav-search-btn:hover {
+  background-color: white !important;
+  color: #8c52ff !important;
+  border: 1px solid #8c52ff !important;
+}
+
+@media only screen and (min-width: 992px){
+  .navbar-nav .nav-item:after {
+    content: "";
+    position: absolute;
+    background-color: #8c52ff;
+    height: 3px;
+    width: 0;
+    left: 10;
+    bottom: 36px;
+    transition: 0.3s;
+  }
+  
+  .navbar-nav .nav-item:hover {
+    color: #8c52ff;
+  }
+  
+  .navbar-nav .nav-item:hover:after {
+    width: 7%;
+  }
+}
