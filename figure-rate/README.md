@@ -3,7 +3,7 @@
   <p style="margin-top: 15px; font-size: 17px;">🔍 Comparing interest rates from Fiji's financial institutions made easy! 👌</p>
   <div style="display: flex; justify-content: center;">
     <img src="https://img.shields.io/badge/npm->=_10.2.4-blue" width="105" height="20" alt="npm version" style="margin-right: 10px;" />
-    <img src="https://img.shields.io/badge/node_.js->=_20.11.1-dark_green" width="105" height="20" alt="Node.js version" />
+    <img src="https://img.shields.io/badge/node.js->=_20.11.1-dark_green" width="105" height="20" alt="Node.js version" />
   </div>
 </div>
 

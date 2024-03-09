@@ -21,7 +21,7 @@ function TermDepositsBody({ tableHeadings, tableBody }: TermDepositsBodyProps) {
           Compare interest rates with ease.
         </h1>
 
-        <div className="container mt-5">
+        <div className="container-fluid mt-5">
           <table className="table table-striped table-responsive table-hover">
             <thead className="table-header table-light">
               <tr>

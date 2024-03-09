@@ -1,7 +1,9 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TermDepositsBody from "./components/TermDepositsBody";
+import Footer from "./components/Footer";
 import figureRateLogo from "./assets/figure-rate-logo-1.png";
+import figurerateLogoFooter from "./assets/figure-rate-logo-footer.png";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function App() {
@@ -183,6 +185,7 @@ function App() {
         tableHeadings={headingAndInstitutions}
         tableBody={rows}
       />
+      <Footer figureRateLogoFilePath={figurerateLogoFooter} />
     </>
   );
 }
