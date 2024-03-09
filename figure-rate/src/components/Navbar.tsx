@@ -14,7 +14,7 @@ function Navbar({ imgSrcPath, navMenuItems }: NavbarProps) {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div className="container-fluid">
           <a className="navbar-sitename" href="#">
             <img
