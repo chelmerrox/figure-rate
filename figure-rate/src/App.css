@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+.league-spartan-font {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 65px;
+  color: #484646;
+}
+
+
 .navbar-nav .nav-link.active {
   color: #8c52ff !important;
   font-weight: 500;
