@@ -1,5 +1,5 @@
 <div style="display:flex; flex-direction: column; align-items: center;">
-  <img src="./src/assets/figure-rate-logo-1.png" width="150" height="150" alt="Figure Rate Logo" />
+  <img src="./figure-rate/src/assets/figure-rate-logo-1.png" width="150" height="150" alt="Figure Rate Logo" />
   <p style="margin-top: 15px; font-size: 17px;">🔍 Comparing interest rates from Fiji's financial institutions made easy! 👌</p>
   <div style="display: flex; justify-content: center;">
     <img src="https://img.shields.io/badge/npm->=_10.2.4-blue" width="105" height="20" alt="npm version" style="margin-right: 10px;" />
