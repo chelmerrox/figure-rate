@@ -88,7 +88,7 @@ function Footer({ figureRateLogoFilePath }: FooterProps) {
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
-                  fill="##484646"
+                  fill="#484646"
                   className="bi bi-facebook"
                   viewBox="0 0 16 16"
                 >
