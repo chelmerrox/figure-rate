@@ -1,4 +1,4 @@
-<div style="display:flex; flex-direction: column; align-items: center;">
+<div align="center">
   <img src="./figure-rate/src/assets/figure-rate-logo-1.png" width="150" height="150" alt="Figure Rate Logo" />
   <p style="margin-top: 15px; font-size: 17px;">🔍 Comparing interest rates from Fiji's financial institutions made easy! 👌</p>
   <div style="display: flex; justify-content: center;">
