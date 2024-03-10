@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import TermDepositsBody from "./components/TermDepositsBody";
 import Footer from "./components/Footer";
 import figureRateLogo from "./assets/figure-rate-logo-1.png";
-import figurerateLogoFooter from "./assets/figure-rate-logo-footer.png";
+import figureRateLogoFooter from "./assets/figure-rate-logo-footer.png";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function App() {
@@ -178,6 +178,30 @@ function App() {
     */
   };
 
+  /*
+  const footerColumns = {
+    footerColumns: [
+      [
+        "about",
+        "#about",
+        "About us",
+        "#privacypolicy",
+        "Privacy Policy",
+        "#termsandconditions",
+        "Terms & Conditions",
+      ],
+      ["contact", "#contactus", "Contact us"],
+      [
+        "legal",
+        "#privacypolicy",
+        "Privacy Policy",
+        "#termsofuse",
+        "Terms of use",
+      ],
+    ],
+  };
+  */
+
   return (
     <>
       <Navbar imgSrcPath={figureRateLogo} navMenuItems={menuItems} />
@@ -185,7 +209,7 @@ function App() {
         tableHeadings={headingAndInstitutions}
         tableBody={rows}
       />
-      <Footer figureRateLogoFilePath={figurerateLogoFooter} />
+      <Footer figureRateLogoFilePath={figureRateLogoFooter} />
     </>
   );
 }

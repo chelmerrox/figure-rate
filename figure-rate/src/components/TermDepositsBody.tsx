@@ -18,7 +18,7 @@ function TermDepositsBody({ tableHeadings, tableBody }: TermDepositsBodyProps) {
     <>
       <section className="term-deposits-body m-5">
         <h1 className="league-spartan-font text-center">
-          Compare interest rates with ease.
+          Compare interest rates with <span className="font-purple">ease.</span>
         </h1>
 
         <div className="container-fluid mt-5">

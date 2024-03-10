@@ -28,6 +28,10 @@
   background-color: #8c52ff;
 }
 
+.font-purple {
+  color:#8c52ff;
+}
+
 .nav-search-btn:hover {
   background-color: white !important;
   color: #8c52ff !important;
