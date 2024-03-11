@@ -3,14 +3,7 @@ import "../App.css";
 
 interface TermDepositsBodyProps {
   tableHeadings: string[];
-  tableBody: {
-    term: string[];
-    /*
-    interestRates: {
-      financialInstitution: string[];
-    };
-    */
-  };
+  tableBody: string[][];
 }
 
 function TermDepositsBody({ tableHeadings, tableBody }: TermDepositsBodyProps) {
@@ -21,8 +14,8 @@ function TermDepositsBody({ tableHeadings, tableBody }: TermDepositsBodyProps) {
           Compare interest rates with <span className="font-purple">ease.</span>
         </h1>
 
-        <div className="container-fluid mt-5">
-          <table className="table table-striped table-responsive table-hover">
+        <div className="table-responsive mt-5">
+          <table className="table table-striped table-hover">
             <thead className="table-header table-light">
               <tr>
                 {tableHeadings.map((heading, i) => (
@@ -32,10 +25,19 @@ function TermDepositsBody({ tableHeadings, tableBody }: TermDepositsBodyProps) {
                 ))}
               </tr>
             </thead>
-            <tbody>
-              {tableBody.term.map((termPeriod, j) => (
-                <tr key={j}>
-                  <th className="text-center">{termPeriod} months</th>
+            <tbody className="table-group-divider">
+              {tableBody.map((row, i) => (
+                <tr key={i + 1}>
+                  {row.map((item, j) => (
+                    <td
+                      className={
+                        j === 0 ? "text-center fw-bolder" : "text-center"
+                      }
+                      scope={j === 0 ? "row" : ""}
+                    >
+                      {j === 0 ? item + " months" : item}
+                    </td>
+                  ))}
                 </tr>
               ))}
             </tbody>
@@ -47,46 +49,3 @@ function TermDepositsBody({ tableHeadings, tableBody }: TermDepositsBodyProps) {
 }
 
 export default TermDepositsBody;
-
-/*
-(    
-  <tr>
-    <th scope="row">{string} months</th>
-    <td>Mark</td>
-    <td>Otto</td>
-    <td>@mdo</td>
-    <td>@mdo</td>
-    <td>@mdo</td>
-    <td>@mdo</td>
-    <td>@mdo</td>
-    <td>@mdo</td>
-    <td>@mdo</td>
-  </tr>
-)
-*/
-
-/*
-  const thead = document.querySelector(".table-header");
-  const tr = document.createElement("tr");
-  const th = document.createElement("th");
-  const td = document.createElement("td");
-
-  if (j === 0) {
-    th.textContent = string;
-    th.setAttribute("scope", "row");
-    tr.append(th);
-  } else {
-    td.textContent = string;
-    tr.append(td);
-  }
-
-  thead.after(tr);
- */
-
-/*
-  tableBody.interestRates.forEach((key, k) => {
-    if (j === k){
-      key.forEach(())
-    }
-  })
-*/
