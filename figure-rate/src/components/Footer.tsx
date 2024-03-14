@@ -1,69 +1,40 @@
 interface FooterProps {
-  //footerColumns: string[][];
+  footerColumns: string[][];
+  /*
+  footerColumns: {
+    about: string[];
+    contact: string[];
+    legal: string[];
+  };
+  */
   figureRateLogoFilePath: string;
 }
 
-function Footer({ figureRateLogoFilePath }: FooterProps) {
+function Footer({ footerColumns, figureRateLogoFilePath }: FooterProps) {
   return (
     <>
       <footer className="bg-purple p-5">
         <div className="d-flex flex-column flex-md-row align-items-md-baseline justify-content-md-around">
-          <div className="about-section">
-            <h5 className="text-white">About</h5>
+          {footerColumns.map((column, i) => (
+            <div key={i + 1} className={column[0] + "-section"}>
+              <h5 className="text-white text-capitalize">{column[0]}</h5>
 
-            <hr className="text-white fw-bolder" />
+              <hr className="text-white fw-bolder" />
 
-            <ul className="text-white list-unstyled">
-              <li>
-                <a href="" className="text-white text-decoration-none">
-                  About us
-                </a>
-              </li>
-              <li>
-                <a href="" className="text-white text-decoration-none">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="" className="text-white text-decoration-none">
-                  Terms & conditions
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="contact-section">
-            <h5 className="text-white">Contact</h5>
-
-            <hr className="text-white fw-bolder" />
-
-            <ul className="text-white list-unstyled">
-              <li>
-                <a href="" className="text-white text-decoration-none">
-                  Contact us
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="legal-section">
-            <h5 className="text-white">Legal</h5>
-
-            <hr className="text-white fw-bolder" />
-
-            <ul className="text-white list-unstyled">
-              <li>
-                <a href="" className="text-white text-decoration-none">
-                  Privacy policy
-                </a>
-              </li>
-              <li>
-                <a href="" className="text-white text-decoration-none">
-                  Terms of use
-                </a>
-              </li>
-            </ul>
-          </div>
+              <ul className="text-white list-unstyled">
+                {column.map((item, j) => (
+                  <li key={j + 1} className={"list-item-" + (j + 1)}>
+                    <a
+                      href={j !== 0 || j % 2 !== 0 ? item : ""}
+                      className="text-white text-decoration-none"
+                    >
+                      {j !== 0 && j % 2 === 0 ? item : ""}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         <div className="d-flex flex-column flex-md-row align-items-center align-items-md-baseline justify-content-md-around">
@@ -163,4 +134,85 @@ export default Footer;
       <div className={section + "-section"}></div>;
     });
   })}
+*/
+
+/*
+  {footerColumns.map((column, i) =>
+    column.map((item, j) => (
+      <div className={item + "-section"}>
+        <h5 className="text-white">{}</h5>
+        <hr className="text-white fw-bolder" />
+      </div>
+    ))
+  )}
+*/
+
+/*
+ <div className="about-section">
+    <h5 className="text-white">About</h5>
+
+    <hr className="text-white fw-bolder" />
+
+    <ul className="text-white list-unstyled">
+      <li>
+        <a href="" className="text-white text-decoration-none">
+          About us
+        </a>
+      </li>
+      <li>
+        <a href="" className="text-white text-decoration-none">
+          Privacy Policy
+        </a>
+      </li>
+      <li>
+        <a href="" className="text-white text-decoration-none">
+          Terms & conditions
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div className="contact-section">
+    <h5 className="text-white">Contact</h5>
+
+    <hr className="text-white fw-bolder" />
+
+    <ul className="text-white list-unstyled">
+      <li>
+        <a href="" className="text-white text-decoration-none">
+          Contact us
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div className="legal-section">
+    <h5 className="text-white">Legal</h5>
+
+    <hr className="text-white fw-bolder" />
+
+    <ul className="text-white list-unstyled">
+      <li>
+        <a href="" className="text-white text-decoration-none">
+          Privacy policy
+        </a>
+      </li>
+      <li>
+        <a href="" className="text-white text-decoration-none">
+          Terms of use
+        </a>
+      </li>
+    </ul>
+  </div>
+ */
+
+/*
+<li key={j}>
+    <a
+      href={j !== 0 || j % 2 !== 0 ? item : ""}
+      className="text-white text-decoration-none"
+    >
+      {j !== 0 && j % 2 === 0 ? item : ""}
+    </a>
+  </li>
 */
