@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
+/* Re-usable styles as classes & ids */
 .league-spartan-font {
   font-family: "League Spartan", sans-serif;
   font-optical-sizing: auto;
@@ -7,16 +8,6 @@
   font-style: normal;
   font-size: 65px;
   color: #484646;
-}
-
-.navbar-nav .nav-link.active {
-  color: #8c52ff !important;
-  font-weight: 500;
-}
-
-.navbar-nav .nav-item:hover {
-  background-color: #f0f0f0;
-  font-weight: 500;
 }
 
 .btn-purple {
@@ -30,6 +21,17 @@
 
 .font-purple {
   color:#8c52ff;
+}
+
+/* Styling for components/sections */
+.navbar-nav .nav-link.active {
+  color: #8c52ff !important;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-item:hover {
+  background-color: #f0f0f0;
+  font-weight: 500;
 }
 
 .nav-search-btn:hover {
