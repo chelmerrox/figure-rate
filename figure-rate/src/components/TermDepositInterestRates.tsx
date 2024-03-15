@@ -11,20 +11,19 @@ interface FinancialInstitutions {
   ];
 }
 
-interface TermDepositsBodyProps {
+interface TermDepositInterestRatesProps {
   tableHeadings: string[];
   tableBody: FinancialInstitutions;
   //tableBody: string[][];
 }
 
-function TermDepositsBody({ tableHeadings, tableBody }: TermDepositsBodyProps) {
+function TermDepositInterestRates({
+  tableHeadings,
+  tableBody,
+}: TermDepositInterestRatesProps) {
   return (
     <>
       <section className="term-deposits-body m-5">
-        <h1 className="league-spartan-font text-center">
-          Compare interest rates with <span className="font-purple">ease.</span>
-        </h1>
-
         <div className="table-responsive mt-5">
           <table className="table table-hover">
             <thead className="table-header table-light">
@@ -66,7 +65,7 @@ function TermDepositsBody({ tableHeadings, tableBody }: TermDepositsBodyProps) {
   );
 }
 
-export default TermDepositsBody;
+export default TermDepositInterestRates;
 
 /*
 {tableBody.map((row, i) => (
