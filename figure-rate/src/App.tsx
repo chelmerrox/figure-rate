@@ -1,6 +1,9 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import TermDepositsBody from "./components/TermDepositsBody";
+import HeadingOne from "./components/HeadingOne";
+import TableNavbarTabs from "./components/TableNavbarTabs";
+import TermDepositInterestRates from "./components/TermDepositInterestRates";
+import TermDepositMinimumRequirements from "./components/TermDepositMinimumRequirements";
 import Footer from "./components/Footer";
 import figureRateLogo from "./assets/figure-rate-logo-1.png";
 import figureRateLogoFooter from "./assets/figure-rate-logo-footer.png";
@@ -15,6 +18,13 @@ function App() {
       "./components/Contact.tsx",
     ],
   };
+
+  const navbarTabsItems = [
+    ["#termdepositstable", "Interest rates"],
+    ["#minimumrequirements", "Minimum requirements"],
+    ["#moreinfo", "More info"],
+    ["#disabled", "Disabled"],
+  ];
 
   const tableHeadings = [
     "#",
@@ -435,7 +445,13 @@ function App() {
   return (
     <>
       <Navbar imgSrcPath={figureRateLogo} navMenuItems={menuItems} />
-      <TermDepositsBody tableHeadings={tableHeadings} tableBody={rows} />
+      <HeadingOne />
+      <TableNavbarTabs navbarTabs={navbarTabsItems} />
+      <TermDepositInterestRates
+        tableHeadings={tableHeadings}
+        tableBody={rows}
+      />
+      <TermDepositMinimumRequirements />
       <Footer
         footerColumns={footerColumns}
         figureRateLogoFilePath={figureRateLogoFooter}
