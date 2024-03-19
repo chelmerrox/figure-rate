@@ -1,11 +1,13 @@
-function HeadingOne() {
+function HomePage() {
   return (
     <>
-      <h1 className="league-spartan-font text-center my-5">
-        Compare interest rates with <span className="font-purple">ease.</span>
-      </h1>
+      <section className="section-1">
+        <h1 className="league-spartan-font text-center my-5">
+          Compare interest rates with <span className="font-purple">ease.</span>
+        </h1>
+      </section>
     </>
   );
 }
 
-export default HeadingOne;
+export default HomePage;
