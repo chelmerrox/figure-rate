@@ -8,10 +8,11 @@ import Footer from "./components/Footer";
 import figureRateLogo from "./assets/figure-rate-logo-1.png";
 import figureRateLogoFooter from "./assets/figure-rate-logo-footer.png";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import { useState } from "react";
 
 function App() {
   let menuItems = {
-    items: ["Term Deposits", "About", "Contact"],
+    items: ["Personal Term Deposit", "About", "Contact"],
     menuFilePath: [
       "./components/TermDeposits.tsx",
       "./components/About.tsx",
@@ -19,280 +20,12 @@ function App() {
     ],
   };
 
-  const navbarTabsItems = [
-    ["#termdepositstable", "Interest rates"],
-    ["#minimumrequirements", "Minimum requirements"],
+  const tableNavbarTabsItems = [
+    ["#termdeposittable", "Interest rates"],
+    ["#minimumrequirementstable", "Minimum requirements"],
     ["#moreinfo", "More info"],
     ["#disabled", "Disabled"],
   ];
-
-  const tableHeadings = [
-    "#",
-    "Name",
-    "1-2",
-    "3",
-    "6",
-    "9",
-    "12",
-    "12 months to 398 days",
-    "399 days",
-    "15",
-    "18",
-    "24",
-    "36",
-    "48",
-    "60",
-    "72",
-    "84",
-    "96",
-    "108",
-    "120",
-  ];
-
-  const rows = {
-    financialInstitution: [
-      {
-        financialInstitutionID: 1,
-        financialInstitutionName: "ANZ",
-        interestRates: [
-          "0.05%",
-          "0.05%",
-          "0.05%",
-          "0.15%",
-          "0.25%",
-          "0.25%",
-          "0.25%",
-          "0.25%",
-          "0.25%",
-          "0.25%",
-          "0.25%",
-          "0.25%",
-          "0.25%",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-        ],
-      },
-      {
-        financialInstitutionID: 2,
-        financialInstitutionName: "Bank of Baroda",
-        interestRates: [
-          "0.25%",
-          "0.25%",
-          "0.25%",
-          "0.35%",
-          "0.60%",
-          "0.60%",
-          "0.60%",
-          "0.60%",
-          "0.60%",
-          "0.60%",
-          "0.60%",
-          "0.60%",
-          "0.60%",
-          "0.60%",
-          "0.60%",
-          "0.60%",
-          "0.60%",
-          "0.60%",
-        ],
-      },
-      {
-        financialInstitutionID: 3,
-        financialInstitutionName: "Bank of South Pacific",
-        interestRates: [
-          "0.10%",
-          "0.10%",
-          "0.10%",
-          "0.20%",
-          "0.30%",
-          "0.30%",
-          "0.30%",
-          "0.30%",
-          "0.30%",
-          "0.30%",
-          "0.30%",
-          "0.30%",
-          "0.30%",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-        ],
-      },
-      {
-        financialInstitutionID: 4,
-        financialInstitutionName: "Credit Corporation Fiji",
-        interestRates: [
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-        ],
-      },
-      {
-        financialInstitutionID: 5,
-        financialInstitutionName: "Fiji Development Bank",
-        interestRates: [
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "0.80%",
-          "0.80%",
-          "0.80%",
-          "0.80%",
-          "0.80%",
-          "1.25%",
-          "1.60%",
-          "2.00%",
-          "2.25%",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-        ],
-      },
-      {
-        financialInstitutionID: 6,
-        financialInstitutionName: "Fijian Holdings Unit Trust",
-        interestRates: [
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-        ],
-      },
-      {
-        financialInstitutionID: 7,
-        financialInstitutionName: "Home Finance Company Bank",
-        interestRates: [
-          "0.25%",
-          "0.25%",
-          "0.50%",
-          "0.75%",
-          "1.00%",
-          "1.00%",
-          "1.00%",
-          "1.00%",
-          "1.00%",
-          "1.00%",
-          "1.00%",
-          "1.00%",
-          "1.00%",
-          "1.00%",
-          "1.00%",
-          "1.00%",
-          "1.00%",
-          "1.00%",
-        ],
-      },
-      {
-        financialInstitutionID: 8,
-        financialInstitutionName: "Kontiki Finance",
-        interestRates: [
-          "N/A",
-          "0.20%",
-          "0.35%",
-          "0.50%",
-          "1.75%",
-          "1.75%",
-          "1.75%",
-          "1.75%",
-          "1.75%",
-          "2.00%",
-          "2.25%",
-          "2.50%",
-          "3.00%",
-          "3.25%",
-          "3.50%",
-          "3.75%",
-          "3.75%",
-          "4.00%",
-        ],
-      },
-      {
-        financialInstitutionID: 9,
-        financialInstitutionName: "Merchant Finance",
-        interestRates: [
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-        ],
-      },
-      {
-        financialInstitutionID: 10,
-        financialInstitutionName: "Westpac Fiji",
-        interestRates: [
-          "0.05%",
-          "0.05%",
-          "0.10%",
-          "0.10%",
-          "0.25%",
-          "0.25%",
-          "0.25%",
-          "0.25%",
-          "0.30%",
-          "0.30%",
-          "0.40%",
-          "0.50%",
-          "0.50%",
-          "0.50%",
-          "0.50%",
-          "0.50%",
-          "0.50%",
-          "0.50%",
-        ],
-      },
-    ],
-  };
 
   const footerColumns = [
     [
@@ -442,16 +175,21 @@ function App() {
   };
   */
 
+  const [tableNavbarTabIndex, setTableNavbarTabIndex] = useState(0);
+
   return (
     <>
       <Navbar imgSrcPath={figureRateLogo} navMenuItems={menuItems} />
       <HeadingOne />
-      <TableNavbarTabs navbarTabs={navbarTabsItems} />
-      <TermDepositInterestRates
-        tableHeadings={tableHeadings}
-        tableBody={rows}
+      <TableNavbarTabs
+        navbarTabs={tableNavbarTabsItems}
+        onSelectItem={(index) => {
+          console.log(index);
+          setTableNavbarTabIndex(index);
+        }}
       />
-      <TermDepositMinimumRequirements />
+      {tableNavbarTabIndex === 0 && <TermDepositInterestRates />}
+      {tableNavbarTabIndex === 1 && <TermDepositMinimumRequirements />}
       <Footer
         footerColumns={footerColumns}
         figureRateLogoFilePath={figureRateLogoFooter}

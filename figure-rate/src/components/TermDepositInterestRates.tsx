@@ -1,5 +1,703 @@
+import DataTable from "react-data-table-component";
 import { useState } from "react";
-import "../App.css";
+
+function TermDepositInterestRates() {
+  const columns = [
+    {
+      name: "#",
+      selector: (row) => row.financialInstitutionID,
+      sortable: true,
+    },
+    {
+      name: "Name",
+      selector: (row) => row.financialInstitutionName,
+      sortable: true,
+    },
+    {
+      name: "1-2 months",
+      selector: (row) => row.oneToTwoMonthsInterestRate,
+      sortable: true,
+    },
+    {
+      name: "3 months",
+      selector: (row) => row.threeMonthsInterestRate,
+      sortable: true,
+    },
+    {
+      name: "6 months",
+      selector: (row) => row.sixMonthsInterestRate,
+      sortable: true,
+    },
+    {
+      name: "9 months",
+      selector: (row) => row.nineMonthsInterestRate,
+      sortable: true,
+    },
+    {
+      name: "12 months",
+      selector: (row) => row.twelveMonthsInterestRate,
+      sortable: true,
+    },
+    {
+      name: "12 months to 398 days",
+      selector: (row) => row.thirteenMonthsInterestRate,
+      sortable: true,
+    },
+    {
+      name: "399 days",
+      selector: (row) => row.threeHundresAndNinetyNineDaysInterestRate,
+      sortable: true,
+    },
+    {
+      name: "15 months",
+      selector: (row) => row.fifteenMonthsInterestRate,
+      sortable: true,
+    },
+    {
+      name: "18 months",
+      selector: (row) => row.eighteenMonthsInterestRate,
+      sortable: true,
+    },
+    {
+      name: "24 months",
+      selector: (row) => row.twentyFourMonthsInterestRate,
+      sortable: true,
+    },
+    {
+      name: "36 months",
+      selector: (row) => row.thirtySixMonthsInterestRate,
+      sortable: true,
+    },
+    {
+      name: "48 months",
+      selector: (row) => row.fourtyEightMonthsInterestRate,
+      sortable: true,
+    },
+    {
+      name: "60 months",
+      selector: (row) => row.sixtyMonthsInterestRate,
+      sortable: true,
+    },
+    {
+      name: "72 months",
+      selector: (row) => row.seventyTwoMonthsInterestRate,
+      sortable: true,
+    },
+    {
+      name: "84 months",
+      selector: (row) => row.eightyFourMonthsInterestRate,
+      sortable: true,
+    },
+    {
+      name: "96 months",
+      selector: (row) => row.ninetySixMonthsInterestRate,
+      sortable: true,
+    },
+    {
+      name: "108 months",
+      selector: (row) => row.oneHundredAndEightMonthsInterestRate,
+      sortable: true,
+    },
+    {
+      name: "120 months",
+      selector: (row) => row.oneHundredAndTwentyMonthsInterestRate,
+      sortable: true,
+    },
+  ];
+
+  const data = [
+    {
+      financialInstitutionID: 1,
+      financialInstitutionName: "ANZ",
+      oneToTwoMonthsInterestRate: "0.05%",
+      threeMonthsInterestRate: "0.05%",
+      sixMonthsInterestRate: "0.05%",
+      nineMonthsInterestRate: "0.15%",
+      twelveMonthsInterestRate: "0.25%",
+      thirteenMonthsInterestRate: "0.25%",
+      threeHundresAndNinetyNineDaysInterestRate: "0.25%",
+      fifteenMonthsInterestRate: "0.25%",
+      eighteenMonthsInterestRate: "0.25%",
+      twentyFourMonthsInterestRate: "0.25%",
+      thirtySixMonthsInterestRate: "0.25%",
+      fourtyEightMonthsInterestRate: "0.25%",
+      sixtyMonthsInterestRate: "0.25%",
+      seventyTwoMonthsInterestRate: "N/A",
+      eightyFourMonthsInterestRate: "N/A",
+      ninetySixMonthsInterestRate: "N/A",
+      oneHundredAndEightMonthsInterestRate: "N/A",
+      oneHundredAndTwentyMonthsInterestRate: "N/A",
+    },
+    {
+      financialInstitutionID: 2,
+      financialInstitutionName: "Bank of Baroda",
+      oneToTwoMonthsInterestRate: "0.25%",
+      threeMonthsInterestRate: "0.25%",
+      sixMonthsInterestRate: "0.25%",
+      nineMonthsInterestRate: "0.35%",
+      twelveMonthsInterestRate: "0.60%",
+      thirteenMonthsInterestRate: "0.60%",
+      threeHundresAndNinetyNineDaysInterestRate: "0.60%",
+      fifteenMonthsInterestRate: "0.60%",
+      eighteenMonthsInterestRate: "0.60%",
+      twentyFourMonthsInterestRate: "0.60%",
+      thirtySixMonthsInterestRate: "0.60%",
+      fourtyEightMonthsInterestRate: "0.60%",
+      sixtyMonthsInterestRate: "0.60%",
+      seventyTwoMonthsInterestRate: "0.60%",
+      eightyFourMonthsInterestRate: "0.60%",
+      ninetySixMonthsInterestRate: "0.60%",
+      oneHundredAndEightMonthsInterestRate: "0.60%",
+      oneHundredAndTwentyMonthsInterestRate: "0.60%",
+    },
+    {
+      financialInstitutionID: 3,
+      financialInstitutionName: "Bank of South Pacific",
+      oneToTwoMonthsInterestRate: "0.10%",
+      threeMonthsInterestRate: "0.10%",
+      sixMonthsInterestRate: "0.10%",
+      nineMonthsInterestRate: "0.20%",
+      twelveMonthsInterestRate: "0.30%",
+      thirteenMonthsInterestRate: "0.30%",
+      threeHundresAndNinetyNineDaysInterestRate: "0.30%",
+      fifteenMonthsInterestRate: "0.30%",
+      eighteenMonthsInterestRate: "0.30%",
+      twentyFourMonthsInterestRate: "0.30%",
+      thirtySixMonthsInterestRate: "0.30%",
+      fourtyEightMonthsInterestRate: "0.30%",
+      sixtyMonthsInterestRate: "0.30%",
+      seventyTwoMonthsInterestRate: "N/A",
+      eightyFourMonthsInterestRate: "N/A",
+      ninetySixMonthsInterestRate: "N/A",
+      oneHundredAndEightMonthsInterestRate: "N/A",
+      oneHundredAndTwentyMonthsInterestRate: "N/A",
+    },
+    {
+      financialInstitutionID: 4,
+      financialInstitutionName: "Credit Corporation Fiji",
+      oneToTwoMonthsInterestRate: "N/A",
+      threeMonthsInterestRate: "N/A",
+      sixMonthsInterestRate: "N/A",
+      nineMonthsInterestRate: "N/A",
+      twelveMonthsInterestRate: "N/A",
+      thirteenMonthsInterestRate: "N/A",
+      threeHundresAndNinetyNineDaysInterestRate: "N/A",
+      fifteenMonthsInterestRate: "N/A",
+      eighteenMonthsInterestRate: "N/A",
+      twentyFourMonthsInterestRate: "N/A",
+      thirtySixMonthsInterestRate: "N/A",
+      fourtyEightMonthsInterestRate: "N/A",
+      sixtyMonthsInterestRate: "N/A",
+      seventyTwoMonthsInterestRate: "N/A",
+      eightyFourMonthsInterestRate: "N/A",
+      ninetySixMonthsInterestRate: "N/A",
+      oneHundredAndEightMonthsInterestRate: "N/A",
+      oneHundredAndTwentyMonthsInterestRate: "N/A",
+    },
+    {
+      financialInstitutionID: 5,
+      financialInstitutionName: "Fiji Development Bank",
+      oneToTwoMonthsInterestRate: "N/A",
+      threeMonthsInterestRate: "N/A",
+      sixMonthsInterestRate: "N/A",
+      nineMonthsInterestRate: "N/A",
+      twelveMonthsInterestRate: "0.80%",
+      thirteenMonthsInterestRate: "0.80%",
+      threeHundresAndNinetyNineDaysInterestRate: "0.80%",
+      fifteenMonthsInterestRate: "0.80%",
+      eighteenMonthsInterestRate: "0.80%",
+      twentyFourMonthsInterestRate: "1.25%",
+      thirtySixMonthsInterestRate: "1.60%",
+      fourtyEightMonthsInterestRate: "2.00%",
+      sixtyMonthsInterestRate: "2.25%",
+      seventyTwoMonthsInterestRate: "N/A",
+      eightyFourMonthsInterestRate: "N/A",
+      ninetySixMonthsInterestRate: "N/A",
+      oneHundredAndEightMonthsInterestRate: "N/A",
+      oneHundredAndTwentyMonthsInterestRate: "N/A",
+    },
+    {
+      financialInstitutionID: 6,
+      financialInstitutionName: "Fijian Holdings Unit Trust",
+      oneToTwoMonthsInterestRate: "N/A",
+      threeMonthsInterestRate: "N/A",
+      sixMonthsInterestRate: "N/A",
+      nineMonthsInterestRate: "N/A",
+      twelveMonthsInterestRate: "N/A",
+      thirteenMonthsInterestRate: "N/A",
+      threeHundresAndNinetyNineDaysInterestRate: "N/A",
+      fifteenMonthsInterestRate: "N/A",
+      eighteenMonthsInterestRate: "N/A",
+      twentyFourMonthsInterestRate: "N/A",
+      thirtySixMonthsInterestRate: "N/A",
+      fourtyEightMonthsInterestRate: "N/A",
+      sixtyMonthsInterestRate: "N/A",
+      seventyTwoMonthsInterestRate: "N/A",
+      eightyFourMonthsInterestRate: "N/A",
+      ninetySixMonthsInterestRate: "N/A",
+      oneHundredAndEightMonthsInterestRate: "N/A",
+      oneHundredAndTwentyMonthsInterestRate: "N/A",
+    },
+    {
+      financialInstitutionID: 7,
+      financialInstitutionName: "Home Finance Company Bank",
+      oneToTwoMonthsInterestRate: "0.25%",
+      threeMonthsInterestRate: "0.25%",
+      sixMonthsInterestRate: "0.50%",
+      nineMonthsInterestRate: "0.75%",
+      twelveMonthsInterestRate: "1.00%",
+      thirteenMonthsInterestRate: "1.00%",
+      threeHundresAndNinetyNineDaysInterestRate: "1.00%",
+      fifteenMonthsInterestRate: "1.00%",
+      eighteenMonthsInterestRate: "1.00%",
+      twentyFourMonthsInterestRate: "1.00%",
+      thirtySixMonthsInterestRate: "1.00%",
+      fourtyEightMonthsInterestRate: "1.00%",
+      sixtyMonthsInterestRate: "1.00%",
+      seventyTwoMonthsInterestRate: "1.00%",
+      eightyFourMonthsInterestRate: "1.00%",
+      ninetySixMonthsInterestRate: "1.00%",
+      oneHundredAndEightMonthsInterestRate: "1.00%",
+      oneHundredAndTwentyMonthsInterestRate: "1.00%",
+    },
+    {
+      financialInstitutionID: 8,
+      financialInstitutionName: "Kontiki Finance",
+      oneToTwoMonthsInterestRate: "N/A",
+      threeMonthsInterestRate: "0.25%",
+      sixMonthsInterestRate: "0.35%",
+      nineMonthsInterestRate: "0.50%",
+      twelveMonthsInterestRate: "1.75%",
+      thirteenMonthsInterestRate: "1.75%",
+      threeHundresAndNinetyNineDaysInterestRate: "1.75%",
+      fifteenMonthsInterestRate: "1.75%",
+      eighteenMonthsInterestRate: "1.75%",
+      twentyFourMonthsInterestRate: "2.00%",
+      thirtySixMonthsInterestRate: "2.25%",
+      fourtyEightMonthsInterestRate: "2.50%",
+      sixtyMonthsInterestRate: "3.00%",
+      seventyTwoMonthsInterestRate: "3.25%",
+      eightyFourMonthsInterestRate: "3.50%",
+      ninetySixMonthsInterestRate: "3.75%",
+      oneHundredAndEightMonthsInterestRate: "3.75%",
+      oneHundredAndTwentyMonthsInterestRate: "4.00%",
+    },
+    {
+      financialInstitutionID: 9,
+      financialInstitutionName: "Merchant Finance Limited",
+      oneToTwoMonthsInterestRate: "N/A",
+      threeMonthsInterestRate: "N/A",
+      sixMonthsInterestRate: "N/A",
+      nineMonthsInterestRate: "N/A",
+      twelveMonthsInterestRate: "N/A",
+      thirteenMonthsInterestRate: "N/A",
+      threeHundresAndNinetyNineDaysInterestRate: "N/A",
+      fifteenMonthsInterestRate: "N/A",
+      eighteenMonthsInterestRate: "N/A",
+      twentyFourMonthsInterestRate: "N/A",
+      thirtySixMonthsInterestRate: "N/A",
+      fourtyEightMonthsInterestRate: "N/A",
+      sixtyMonthsInterestRate: "N/A",
+      seventyTwoMonthsInterestRate: "N/A",
+      eightyFourMonthsInterestRate: "N/A",
+      ninetySixMonthsInterestRate: "N/A",
+      oneHundredAndEightMonthsInterestRate: "N/A",
+      oneHundredAndTwentyMonthsInterestRate: "N/A",
+    },
+    {
+      financialInstitutionID: 10,
+      financialInstitutionName: "Westpac Fiji",
+      oneToTwoMonthsInterestRate: "0.05%",
+      threeMonthsInterestRate: "0.05%",
+      sixMonthsInterestRate: "0.10%",
+      nineMonthsInterestRate: "0.10%",
+      twelveMonthsInterestRate: "0.25%",
+      thirteenMonthsInterestRate: "0.25%",
+      threeHundresAndNinetyNineDaysInterestRate: "0.25%",
+      fifteenMonthsInterestRate: "0.25%",
+      eighteenMonthsInterestRate: "0.30%",
+      twentyFourMonthsInterestRate: "0.30%",
+      thirtySixMonthsInterestRate: "0.40%",
+      fourtyEightMonthsInterestRate: "0.50%",
+      sixtyMonthsInterestRate: "0.50%",
+      seventyTwoMonthsInterestRate: "0.50%",
+      eightyFourMonthsInterestRate: "0.50%",
+      ninetySixMonthsInterestRate: "0.50%",
+      oneHundredAndEightMonthsInterestRate: "0.50%",
+      oneHundredAndTwentyMonthsInterestRate: "0.50%",
+    },
+  ];
+
+  const customStyles = {
+    headCells: {
+      style: {
+        backgroundColor: "rgb(248, 249, 250)",
+        fontSize: "14px",
+      },
+    },
+    rows: {
+      style: {
+        fontSize: "13.5px",
+      },
+    },
+  };
+
+  const [records, setRecords] = useState(data);
+
+  // Handle Search is the same as Handle Filter
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newData = data.filter((row) => {
+      return row.financialInstitutionName
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+    });
+
+    setRecords(newData);
+  };
+
+  return (
+    <>
+      <div className="container my-5" id="termdeposittable">
+        <div className="input-group d-flex flex-row justify-content-end">
+          <input
+            type="search"
+            className="form-control-sm border ps-3"
+            placeholder="Search"
+            onChange={handleSearch}
+          />
+          <span className="input-group-text">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              className="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>
+          </span>
+        </div>
+
+        <DataTable
+          className="table"
+          title="Personal Term Deposit Interest Rates in 2024"
+          columns={columns}
+          data={records}
+          fixedHeader
+          selectableRows
+          pagination
+          customStyles={customStyles}
+        />
+      </div>
+    </>
+  );
+}
+
+export default TermDepositInterestRates;
+
+/*
+{tableBody.map((row, i) => (
+  <tr key={i + 1}>
+    {row.map((item, j) => (
+      <td
+        className={
+          j === 0
+            ? "text-center fw-bolder bg-light"
+            : "text-center"
+        }
+        scope={j === 0 ? "row" : ""}
+      >
+        {j === 0 ? item + " months" : item}
+      </td>
+    ))}
+  </tr>
+))}
+*/
+
+/* 
+    bankOfBaroda: string[];
+    bankOfSouthPacific: string[];
+    creditCorporationFiji: string[];
+    fijiDevelopmentBank: string[];
+    fijianHoldingdUnitTrust: string[];
+    homeFinanceCompanyBank: string[];
+    kontikiFinance: string[];
+    merchantFinance: string[];
+    westpac: string[];
+*/
+
+/*
+ 
+const termDepositInterestRatesHeadings = [
+    "#",
+    "Name",
+    "1-2",
+    "3",
+    "6",
+    "9",
+    "12",
+    "12 months to 398 days",
+    "399 days",
+    "15",
+    "18",
+    "24",
+    "36",
+    "48",
+    "60",
+    "72",
+    "84",
+    "96",
+    "108",
+    "120",
+  ];
+
+  const termDepositInterestRatesRows = {
+    financialInstitution: [
+      {
+        financialInstitutionID: 1,
+        financialInstitutionName: "ANZ",
+        interestRates: [
+          "0.05%",
+          "0.05%",
+          "0.05%",
+          "0.15%",
+          "0.25%",
+          "0.25%",
+          "0.25%",
+          "0.25%",
+          "0.25%",
+          "0.25%",
+          "0.25%",
+          "0.25%",
+          "0.25%",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+        ],
+      },
+      {
+        financialInstitutionID: 2,
+        financialInstitutionName: "Bank of Baroda",
+        interestRates: [
+          "0.25%",
+          "0.25%",
+          "0.25%",
+          "0.35%",
+          "0.60%",
+          "0.60%",
+          "0.60%",
+          "0.60%",
+          "0.60%",
+          "0.60%",
+          "0.60%",
+          "0.60%",
+          "0.60%",
+          "0.60%",
+          "0.60%",
+          "0.60%",
+          "0.60%",
+          "0.60%",
+        ],
+      },
+      {
+        financialInstitutionID: 3,
+        financialInstitutionName: "Bank of South Pacific",
+        interestRates: [
+          "0.10%",
+          "0.10%",
+          "0.10%",
+          "0.20%",
+          "0.30%",
+          "0.30%",
+          "0.30%",
+          "0.30%",
+          "0.30%",
+          "0.30%",
+          "0.30%",
+          "0.30%",
+          "0.30%",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+        ],
+      },
+      {
+        financialInstitutionID: 4,
+        financialInstitutionName: "Credit Corporation Fiji",
+        interestRates: [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+        ],
+      },
+      {
+        financialInstitutionID: 5,
+        financialInstitutionName: "Fiji Development Bank",
+        interestRates: [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "0.80%",
+          "0.80%",
+          "0.80%",
+          "0.80%",
+          "0.80%",
+          "1.25%",
+          "1.60%",
+          "2.00%",
+          "2.25%",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+        ],
+      },
+      {
+        financialInstitutionID: 6,
+        financialInstitutionName: "Fijian Holdings Unit Trust",
+        interestRates: [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+        ],
+      },
+      {
+        financialInstitutionID: 7,
+        financialInstitutionName: "Home Finance Company Bank",
+        interestRates: [
+          "0.25%",
+          "0.25%",
+          "0.50%",
+          "0.75%",
+          "1.00%",
+          "1.00%",
+          "1.00%",
+          "1.00%",
+          "1.00%",
+          "1.00%",
+          "1.00%",
+          "1.00%",
+          "1.00%",
+          "1.00%",
+          "1.00%",
+          "1.00%",
+          "1.00%",
+          "1.00%",
+        ],
+      },
+      {
+        financialInstitutionID: 8,
+        financialInstitutionName: "Kontiki Finance",
+        interestRates: [
+          "N/A",
+          "0.20%",
+          "0.35%",
+          "0.50%",
+          "1.75%",
+          "1.75%",
+          "1.75%",
+          "1.75%",
+          "1.75%",
+          "2.00%",
+          "2.25%",
+          "2.50%",
+          "3.00%",
+          "3.25%",
+          "3.50%",
+          "3.75%",
+          "3.75%",
+          "4.00%",
+        ],
+      },
+      {
+        financialInstitutionID: 9,
+        financialInstitutionName: "Merchant Finance",
+        interestRates: [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+        ],
+      },
+      {
+        financialInstitutionID: 10,
+        financialInstitutionName: "Westpac",
+        interestRates: [
+          "0.05%",
+          "0.05%",
+          "0.10%",
+          "0.10%",
+          "0.25%",
+          "0.25%",
+          "0.25%",
+          "0.25%",
+          "0.30%",
+          "0.30%",
+          "0.40%",
+          "0.50%",
+          "0.50%",
+          "0.50%",
+          "0.50%",
+          "0.50%",
+          "0.50%",
+          "0.50%",
+        ],
+      },
+    ],
+  };
+
+
 
 interface FinancialInstitutions {
   financialInstitution: [
@@ -23,7 +721,7 @@ function TermDepositInterestRates({
 }: TermDepositInterestRatesProps) {
   return (
     <>
-      <section className="term-deposits-body m-5">
+       <section className="term-deposits-body m-5">
         <div className="table-responsive mt-5">
           <table className="table table-hover">
             <thead className="table-header table-light">
@@ -60,40 +758,10 @@ function TermDepositInterestRates({
             </tbody>
           </table>
         </div>
-      </section>
+       </section>     
     </>
   );
 }
 
 export default TermDepositInterestRates;
-
-/*
-{tableBody.map((row, i) => (
-  <tr key={i + 1}>
-    {row.map((item, j) => (
-      <td
-        className={
-          j === 0
-            ? "text-center fw-bolder bg-light"
-            : "text-center"
-        }
-        scope={j === 0 ? "row" : ""}
-      >
-        {j === 0 ? item + " months" : item}
-      </td>
-    ))}
-  </tr>
-))}
-*/
-
-/* 
-    bankOfBaroda: string[];
-    bankOfSouthPacific: string[];
-    creditCorporationFiji: string[];
-    fijiDevelopmentBank: string[];
-    fijianHoldingdUnitTrust: string[];
-    homeFinanceCompanyBank: string[];
-    kontikiFinance: string[];
-    merchantFinance: string[];
-    westpac: string[];
 */
