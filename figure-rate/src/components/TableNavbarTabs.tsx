@@ -1,23 +1,34 @@
+import { useState } from "react";
+
 interface TableNavbarTabsProps {
   navbarTabs: string[][];
+  onSelectItem: (item: Number) => void;
 }
 
-function TableNavbarTabs({ navbarTabs }: TableNavbarTabsProps) {
+function TableNavbarTabs({ navbarTabs, onSelectItem }: TableNavbarTabsProps) {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
   return (
     <>
-      <ul className="nav nav-pills nav-fill border-purple-rounded mx-5">
-        {navbarTabs.map((tabs, i) => (
-          <li key={i} className={"navbar-tab-" + (i + 1) + " nav-item"}>
-            <a
-              className={i === 0 ? "nav-link active" : "nav-link"}
-              aria-current="page"
-              href={tabs[0]}
-            >
-              {tabs[1]}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <div className="container my-5">
+        <ul className="nav nav-pills nav-fill border-purple-rounded">
+          {navbarTabs.map((navbarTab, i) => (
+            <li key={i} className={"navbar-tab-" + (i + 1) + " nav-item"}>
+              <a
+                className={selectedIndex === i ? "nav-link active" : "nav-link"}
+                aria-current="page"
+                href={navbarTab[0]}
+                onClick={() => {
+                  setSelectedIndex(i);
+                  onSelectItem(i);
+                }}
+              >
+                {navbarTab[1]}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 }
