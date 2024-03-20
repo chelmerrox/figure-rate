@@ -1,7 +1,13 @@
 import DataTable from "react-data-table-component";
 import { useState } from "react";
 
-function TermDepositMinimumRequirements() {
+interface TermDepositMinimumRequirementsProps {
+  currentYear: Number;
+}
+
+function TermDepositMinimumRequirements({
+  currentYear,
+}: TermDepositMinimumRequirementsProps) {
   const columns = [
     {
       name: "#",
@@ -9,8 +15,13 @@ function TermDepositMinimumRequirements() {
       sortable: true,
     },
     {
-      name: "Name",
+      name: "Institution Name",
       selector: (row) => row.financialInstitutionName,
+      sortable: true,
+    },
+    {
+      name: "Product Name",
+      selector: (row) => row.productName,
       sortable: true,
     },
     {
@@ -64,6 +75,7 @@ function TermDepositMinimumRequirements() {
     {
       financialInstitutionID: 1,
       financialInstitutionName: "ANZ",
+      productName: "Personal Term Deposit",
       minimumDepositAmount: "$500",
       maximumDepositAmount: "$100,000",
       rulesForDepositsAboveMaximumAmount: "-",
@@ -77,6 +89,7 @@ function TermDepositMinimumRequirements() {
     {
       financialInstitutionID: 2,
       financialInstitutionName: "Bank of Baroda",
+      productName: "Personal Term Deposit",
       minimumDepositAmount: "$500",
       maximumDepositAmount: "-",
       rulesForDepositsAboveMaximumAmount: "-",
@@ -90,6 +103,7 @@ function TermDepositMinimumRequirements() {
     {
       financialInstitutionID: 3,
       financialInstitutionName: "Bank of South Pacific",
+      productName: "Personal Term Deposit",
       minimumDepositAmount: "$1,000",
       maximumDepositAmount: "-",
       rulesForDepositsAboveMaximumAmount: "-",
@@ -103,6 +117,7 @@ function TermDepositMinimumRequirements() {
     {
       financialInstitutionID: 4,
       financialInstitutionName: "Credit Corporation Fiji",
+      productName: "Personal Term Deposit",
       minimumDepositAmount: "-",
       maximumDepositAmount: "-",
       rulesForDepositsAboveMaximumAmount: "-",
@@ -116,6 +131,7 @@ function TermDepositMinimumRequirements() {
     {
       financialInstitutionID: 5,
       financialInstitutionName: "Fiji Development Bank",
+      productName: "Yaubula Term Deposit",
       minimumDepositAmount: "$25,000",
       maximumDepositAmount: "No limit",
       rulesForDepositsAboveMaximumAmount: "-",
@@ -129,6 +145,7 @@ function TermDepositMinimumRequirements() {
     {
       financialInstitutionID: 6,
       financialInstitutionName: "Fijian Holdings Unit Trust",
+      productName: "Personal Term Deposit",
       minimumDepositAmount: "-",
       maximumDepositAmount: "-",
       rulesForDepositsAboveMaximumAmount: "-",
@@ -142,6 +159,7 @@ function TermDepositMinimumRequirements() {
     {
       financialInstitutionID: 7,
       financialInstitutionName: "Home Finance Company Bank",
+      productName: "Personal Term Deposit",
       minimumDepositAmount: "$500",
       maximumDepositAmount: "$250,000",
       rulesForDepositsAboveMaximumAmount: "-",
@@ -155,6 +173,7 @@ function TermDepositMinimumRequirements() {
     {
       financialInstitutionID: 8,
       financialInstitutionName: "Kontiki Finance",
+      productName: "Personal Term Deposit",
       minimumDepositAmount: "$5,000",
       maximumDepositAmount: "$250,000",
       rulesForDepositsAboveMaximumAmount: "-",
@@ -168,6 +187,7 @@ function TermDepositMinimumRequirements() {
     {
       financialInstitutionID: 9,
       financialInstitutionName: "Merchant Finance Limited",
+      productName: "Personal Term Deposit",
       minimumDepositAmount: "$500",
       maximumDepositAmount: "$250,000",
       rulesForDepositsAboveMaximumAmount: "-",
@@ -181,6 +201,7 @@ function TermDepositMinimumRequirements() {
     {
       financialInstitutionID: 10,
       financialInstitutionName: "Westpac Fiji",
+      productName: "Personal Term Deposit",
       minimumDepositAmount: "$1,000",
       maximumDepositAmount: "-",
       rulesForDepositsAboveMaximumAmount: "-",
@@ -246,7 +267,9 @@ function TermDepositMinimumRequirements() {
 
         <DataTable
           className="table"
-          title="Minimum Requirements for Personal Term Deposit in 2024"
+          title={
+            "Minimum Requirements for Personal Term Deposit in " + currentYear
+          }
           columns={columns}
           data={records}
           fixedHeader

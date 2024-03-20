@@ -4,6 +4,7 @@ import HeadingOne from "./components/HeadingOne";
 import TableNavbarTabs from "./components/TableNavbarTabs";
 import TermDepositInterestRates from "./components/TermDepositInterestRates";
 import TermDepositMinimumRequirements from "./components/TermDepositMinimumRequirements";
+import MoreInfo from "./components/MoreInfo";
 import Footer from "./components/Footer";
 import figureRateLogo from "./assets/figure-rate-logo-1.png";
 import figureRateLogoFooter from "./assets/figure-rate-logo-footer.png";
@@ -11,6 +12,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { useState } from "react";
 
 function App() {
+  let currentYear = new Date().getFullYear();
+
   let menuItems = {
     items: ["Personal Term Deposit", "About", "Contact"],
     menuFilePath: [
@@ -21,10 +24,9 @@ function App() {
   };
 
   const tableNavbarTabsItems = [
-    ["#termdeposittable", "Interest rates"],
-    ["#minimumrequirementstable", "Minimum requirements"],
+    ["#termdeposit", "Interest rates"],
+    ["#minimumrequirements", "Minimum requirements"],
     ["#moreinfo", "More info"],
-    ["#disabled", "Disabled"],
   ];
 
   const footerColumns = [
@@ -188,11 +190,17 @@ function App() {
           setTableNavbarTabIndex(index);
         }}
       />
-      {tableNavbarTabIndex === 0 && <TermDepositInterestRates />}
-      {tableNavbarTabIndex === 1 && <TermDepositMinimumRequirements />}
+      {tableNavbarTabIndex === 0 && (
+        <TermDepositInterestRates currentYear={currentYear} />
+      )}
+      {tableNavbarTabIndex === 1 && (
+        <TermDepositMinimumRequirements currentYear={currentYear} />
+      )}
+      {tableNavbarTabIndex === 2 && <MoreInfo currentYear={currentYear} />}
       <Footer
         footerColumns={footerColumns}
         figureRateLogoFilePath={figureRateLogoFooter}
+        currentYear={currentYear}
       />
     </>
   );

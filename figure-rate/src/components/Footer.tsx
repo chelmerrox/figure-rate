@@ -8,9 +8,14 @@ interface FooterProps {
   };
   */
   figureRateLogoFilePath: string;
+  currentYear: Number;
 }
 
-function Footer({ footerColumns, figureRateLogoFilePath }: FooterProps) {
+function Footer({
+  footerColumns,
+  figureRateLogoFilePath,
+  currentYear,
+}: FooterProps) {
   return (
     <>
       <footer className="bg-purple p-5">
@@ -48,7 +53,7 @@ function Footer({ footerColumns, figureRateLogoFilePath }: FooterProps) {
               />
             </a>
             <small className="text-white">
-              ©️ <span id="currentYear">2024 </span>
+              ©️ <span id="currentYear">{currentYear} </span>
               Figure Rate, LLC. An Aver company. All rights reserved.
             </small>
           </div>

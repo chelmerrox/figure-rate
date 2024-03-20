@@ -1,7 +1,13 @@
 import DataTable from "react-data-table-component";
 import { useState } from "react";
 
-function TermDepositInterestRates() {
+interface TermDepositInterestRatesProps {
+  currentYear: Number;
+}
+
+function TermDepositInterestRates({
+  currentYear,
+}: TermDepositInterestRatesProps) {
   const columns = [
     {
       name: "#",
@@ -9,8 +15,13 @@ function TermDepositInterestRates() {
       sortable: true,
     },
     {
-      name: "Name",
+      name: "Institution Name",
       selector: (row) => row.financialInstitutionName,
+      sortable: true,
+    },
+    {
+      name: "Product Name",
+      selector: (row) => row.productName,
       sortable: true,
     },
     {
@@ -109,6 +120,7 @@ function TermDepositInterestRates() {
     {
       financialInstitutionID: 1,
       financialInstitutionName: "ANZ",
+      productName: "Personal Term Deposit",
       oneToTwoMonthsInterestRate: "0.05%",
       threeMonthsInterestRate: "0.05%",
       sixMonthsInterestRate: "0.05%",
@@ -131,6 +143,7 @@ function TermDepositInterestRates() {
     {
       financialInstitutionID: 2,
       financialInstitutionName: "Bank of Baroda",
+      productName: "Personal Term Deposit",
       oneToTwoMonthsInterestRate: "0.25%",
       threeMonthsInterestRate: "0.25%",
       sixMonthsInterestRate: "0.25%",
@@ -153,6 +166,7 @@ function TermDepositInterestRates() {
     {
       financialInstitutionID: 3,
       financialInstitutionName: "Bank of South Pacific",
+      productName: "Personal Term Deposit",
       oneToTwoMonthsInterestRate: "0.10%",
       threeMonthsInterestRate: "0.10%",
       sixMonthsInterestRate: "0.10%",
@@ -175,6 +189,7 @@ function TermDepositInterestRates() {
     {
       financialInstitutionID: 4,
       financialInstitutionName: "Credit Corporation Fiji",
+      productName: "Personal Term Deposit",
       oneToTwoMonthsInterestRate: "N/A",
       threeMonthsInterestRate: "N/A",
       sixMonthsInterestRate: "N/A",
@@ -197,6 +212,7 @@ function TermDepositInterestRates() {
     {
       financialInstitutionID: 5,
       financialInstitutionName: "Fiji Development Bank",
+      productName: "Yaubula Term Deposit",
       oneToTwoMonthsInterestRate: "N/A",
       threeMonthsInterestRate: "N/A",
       sixMonthsInterestRate: "N/A",
@@ -219,28 +235,30 @@ function TermDepositInterestRates() {
     {
       financialInstitutionID: 6,
       financialInstitutionName: "Fijian Holdings Unit Trust",
-      oneToTwoMonthsInterestRate: "N/A",
-      threeMonthsInterestRate: "N/A",
-      sixMonthsInterestRate: "N/A",
-      nineMonthsInterestRate: "N/A",
-      twelveMonthsInterestRate: "N/A",
-      thirteenMonthsInterestRate: "N/A",
-      threeHundresAndNinetyNineDaysInterestRate: "N/A",
-      fifteenMonthsInterestRate: "N/A",
-      eighteenMonthsInterestRate: "N/A",
-      twentyFourMonthsInterestRate: "N/A",
-      thirtySixMonthsInterestRate: "N/A",
-      fourtyEightMonthsInterestRate: "N/A",
-      sixtyMonthsInterestRate: "N/A",
-      seventyTwoMonthsInterestRate: "N/A",
-      eightyFourMonthsInterestRate: "N/A",
-      ninetySixMonthsInterestRate: "N/A",
-      oneHundredAndEightMonthsInterestRate: "N/A",
-      oneHundredAndTwentyMonthsInterestRate: "N/A",
+      productName: "-",
+      oneToTwoMonthsInterestRate: "-",
+      threeMonthsInterestRate: "-",
+      sixMonthsInterestRate: "-",
+      nineMonthsInterestRate: "-",
+      twelveMonthsInterestRate: "-",
+      thirteenMonthsInterestRate: "-",
+      threeHundresAndNinetyNineDaysInterestRate: "-",
+      fifteenMonthsInterestRate: "-",
+      eighteenMonthsInterestRate: "-",
+      twentyFourMonthsInterestRate: "-",
+      thirtySixMonthsInterestRate: "-",
+      fourtyEightMonthsInterestRate: "-",
+      sixtyMonthsInterestRate: "-",
+      seventyTwoMonthsInterestRate: "-",
+      eightyFourMonthsInterestRate: "-",
+      ninetySixMonthsInterestRate: "-",
+      oneHundredAndEightMonthsInterestRate: "-",
+      oneHundredAndTwentyMonthsInterestRate: "-",
     },
     {
       financialInstitutionID: 7,
       financialInstitutionName: "Home Finance Company Bank",
+      productName: "Personal Term Deposit",
       oneToTwoMonthsInterestRate: "0.25%",
       threeMonthsInterestRate: "0.25%",
       sixMonthsInterestRate: "0.50%",
@@ -263,6 +281,7 @@ function TermDepositInterestRates() {
     {
       financialInstitutionID: 8,
       financialInstitutionName: "Kontiki Finance",
+      productName: "Personal Term Deposit",
       oneToTwoMonthsInterestRate: "N/A",
       threeMonthsInterestRate: "0.25%",
       sixMonthsInterestRate: "0.35%",
@@ -285,6 +304,7 @@ function TermDepositInterestRates() {
     {
       financialInstitutionID: 9,
       financialInstitutionName: "Merchant Finance Limited",
+      productName: "Personal Term Deposit",
       oneToTwoMonthsInterestRate: "N/A",
       threeMonthsInterestRate: "N/A",
       sixMonthsInterestRate: "N/A",
@@ -307,6 +327,7 @@ function TermDepositInterestRates() {
     {
       financialInstitutionID: 10,
       financialInstitutionName: "Westpac Fiji",
+      productName: "Personal Term Deposit",
       oneToTwoMonthsInterestRate: "0.05%",
       threeMonthsInterestRate: "0.05%",
       sixMonthsInterestRate: "0.10%",
@@ -381,7 +402,7 @@ function TermDepositInterestRates() {
 
         <DataTable
           className="table"
-          title="Personal Term Deposit Interest Rates in 2024"
+          title={"Personal Term Deposit Interest Rates in " + currentYear}
           columns={columns}
           data={records}
           fixedHeader
