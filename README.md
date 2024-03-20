@@ -13,7 +13,7 @@
 
 ## 📸 Preview
 
-![screenshot](images/preview.png)
+![screenshot](./figure-rate/src/assets/screenshot-1.png)
 
 ## 🔨 Built With
 
