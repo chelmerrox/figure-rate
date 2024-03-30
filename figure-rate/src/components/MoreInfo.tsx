@@ -146,10 +146,32 @@ function MoreInfo({ currentYear }: MoreInfoProps) {
 
   // Handle Search is the same as Handle Filter
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let searchValue: Boolean;
+    let financialInstitutionIDValue: Boolean;
+    let financialInstitutionNameValue: Boolean;
+    let productNameValue: Boolean;
+
     const newData = data.filter((row) => {
-      return row.financialInstitutionName
+      financialInstitutionIDValue = row.financialInstitutionID
+        .toString()
         .toLowerCase()
         .includes(e.target.value.toLowerCase());
+      financialInstitutionNameValue = row.financialInstitutionName
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      productNameValue = row.productName
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+
+      if (financialInstitutionIDValue) {
+        searchValue = financialInstitutionIDValue;
+      } else if (financialInstitutionNameValue) {
+        searchValue = financialInstitutionNameValue;
+      } else {
+        searchValue = productNameValue;
+      }
+
+      return searchValue;
     });
 
     setRecords(newData);

@@ -228,14 +228,41 @@ function TermDepositMinimumRequirements({
     },
   };
 
+  // A super simple expandable component.
+  const ExpandedComponent = ({ data }) => (
+    <pre>{JSON.stringify(data, null, 2)}</pre>
+  );
+
   const [records, setRecords] = useState(data);
 
   // Handle Search is the same as Handle Filter
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let searchValue: Boolean;
+    let financialInstitutionIDValue: Boolean;
+    let financialInstitutionNameValue: Boolean;
+    let productNameValue: Boolean;
+
     const newData = data.filter((row) => {
-      return row.financialInstitutionName
+      financialInstitutionIDValue = row.financialInstitutionID
+        .toString()
         .toLowerCase()
         .includes(e.target.value.toLowerCase());
+      financialInstitutionNameValue = row.financialInstitutionName
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      productNameValue = row.productName
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+
+      if (financialInstitutionIDValue) {
+        searchValue = financialInstitutionIDValue;
+      } else if (financialInstitutionNameValue) {
+        searchValue = financialInstitutionNameValue;
+      } else {
+        searchValue = productNameValue;
+      }
+
+      return searchValue;
     });
 
     setRecords(newData);
@@ -276,6 +303,8 @@ function TermDepositMinimumRequirements({
           selectableRows
           pagination
           customStyles={customStyles}
+          expandableRows
+          expandableRowsComponent={ExpandedComponent}
         />
       </div>
     </>

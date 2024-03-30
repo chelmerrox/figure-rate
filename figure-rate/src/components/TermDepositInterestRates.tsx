@@ -367,10 +367,143 @@ function TermDepositInterestRates({
 
   // Handle Search is the same as Handle Filter
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let searchValue: Boolean;
+    let financialInstitutionIDValue: Boolean;
+    let financialInstitutionNameValue: Boolean;
+    let productNameValue: Boolean;
+    let oneToTwoMonthsValue: Boolean;
+    let threeMonthsInterestRateValue: Boolean;
+    let sixMonthsInterestRateValue: Boolean;
+    let nineMonthsInterestRateValue: Boolean;
+    let twelveMonthsInterestRateValue: Boolean;
+    let thirteenMonthsInterestRateValue: Boolean;
+    let threeHundredAndNinetyNineDaysInterestRateValue: Boolean;
+    let fifteenMonthsInterestRateValue: Boolean;
+    let eighteenMonthsInterestRateValue: Boolean;
+    let twentyFourMonthsInterestRateValue: Boolean;
+    let thirtySixMonthsInterestRateValue: Boolean;
+    let fourtyEightMonthsInterestRateValue: Boolean;
+    let sixtyMonthsInterestRateValue: Boolean;
+    let seventyTwoMonthsInterestRateValue: Boolean;
+    let eightyFourMonthsInterestRateValue: Boolean;
+    let ninetySixMonthsInterestRateValue: Boolean;
+    let oneHundredAndEightMonthsInterestRateValue: Boolean;
+    let oneHundredAndTwentyMonthsInterestRateValue: Boolean;
+
     const newData = data.filter((row) => {
-      return row.financialInstitutionName
+      financialInstitutionIDValue = row.financialInstitutionID
+        .toString()
         .toLowerCase()
         .includes(e.target.value.toLowerCase());
+      financialInstitutionNameValue = row.financialInstitutionName
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      productNameValue = row.productName
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      oneToTwoMonthsValue = row.oneToTwoMonthsInterestRate
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      threeMonthsInterestRateValue = row.threeMonthsInterestRate
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      sixMonthsInterestRateValue = row.sixMonthsInterestRate
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      nineMonthsInterestRateValue = row.nineMonthsInterestRate
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      twelveMonthsInterestRateValue = row.twelveMonthsInterestRate
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      thirteenMonthsInterestRateValue = row.thirteenMonthsInterestRate
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      threeHundredAndNinetyNineDaysInterestRateValue =
+        row.threeMonthsInterestRate
+          .toLowerCase()
+          .includes(e.target.value.toLowerCase());
+      fifteenMonthsInterestRateValue = row.fifteenMonthsInterestRate
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      eighteenMonthsInterestRateValue = row.eighteenMonthsInterestRate
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      twentyFourMonthsInterestRateValue = row.twentyFourMonthsInterestRate
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      thirtySixMonthsInterestRateValue = row.thirtySixMonthsInterestRate
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      fourtyEightMonthsInterestRateValue = row.fourtyEightMonthsInterestRate
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      sixtyMonthsInterestRateValue = row.sixtyMonthsInterestRate
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      seventyTwoMonthsInterestRateValue = row.seventyTwoMonthsInterestRate
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      eightyFourMonthsInterestRateValue = row.eightyFourMonthsInterestRate
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      ninetySixMonthsInterestRateValue = row.ninetySixMonthsInterestRate
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      oneHundredAndEightMonthsInterestRateValue =
+        row.oneHundredAndEightMonthsInterestRate
+          .toLowerCase()
+          .includes(e.target.value.toLowerCase());
+      oneHundredAndTwentyMonthsInterestRateValue =
+        row.oneHundredAndTwentyMonthsInterestRate
+          .toLowerCase()
+          .includes(e.target.value.toLowerCase());
+
+      if (financialInstitutionIDValue) {
+        searchValue = financialInstitutionIDValue;
+      } else if (financialInstitutionNameValue) {
+        searchValue = financialInstitutionNameValue;
+      } else if (productNameValue) {
+        searchValue = productNameValue;
+      } else if (oneToTwoMonthsValue) {
+        searchValue = oneToTwoMonthsValue;
+      } else if (threeMonthsInterestRateValue) {
+        searchValue = threeMonthsInterestRateValue;
+      } else if (sixMonthsInterestRateValue) {
+        searchValue = sixMonthsInterestRateValue;
+      } else if (nineMonthsInterestRateValue) {
+        searchValue = nineMonthsInterestRateValue;
+      } else if (twelveMonthsInterestRateValue) {
+        searchValue = twelveMonthsInterestRateValue;
+      } else if (thirteenMonthsInterestRateValue) {
+        searchValue = thirteenMonthsInterestRateValue;
+      } else if (threeHundredAndNinetyNineDaysInterestRateValue) {
+        searchValue = threeHundredAndNinetyNineDaysInterestRateValue;
+      } else if (fifteenMonthsInterestRateValue) {
+        searchValue = fifteenMonthsInterestRateValue;
+      } else if (eighteenMonthsInterestRateValue) {
+        searchValue = eighteenMonthsInterestRateValue;
+      } else if (twentyFourMonthsInterestRateValue) {
+        searchValue = twentyFourMonthsInterestRateValue;
+      } else if (thirtySixMonthsInterestRateValue) {
+        searchValue = thirtySixMonthsInterestRateValue;
+      } else if (fourtyEightMonthsInterestRateValue) {
+        searchValue = fourtyEightMonthsInterestRateValue;
+      } else if (sixtyMonthsInterestRateValue) {
+        searchValue = sixtyMonthsInterestRateValue;
+      } else if (seventyTwoMonthsInterestRateValue) {
+        searchValue = seventyTwoMonthsInterestRateValue;
+      } else if (eightyFourMonthsInterestRateValue) {
+        searchValue = eightyFourMonthsInterestRateValue;
+      } else if (ninetySixMonthsInterestRateValue) {
+        searchValue = nineMonthsInterestRateValue;
+      } else if (oneHundredAndEightMonthsInterestRateValue) {
+        searchValue = oneHundredAndEightMonthsInterestRateValue;
+      } else {
+        searchValue = oneHundredAndTwentyMonthsInterestRateValue;
+      }
+
+      return searchValue;
     });
 
     setRecords(newData);
