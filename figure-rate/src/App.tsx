@@ -186,7 +186,6 @@ function App() {
       <TableNavbarTabs
         navbarTabs={tableNavbarTabsItems}
         onSelectItem={(index) => {
-          console.log(index);
           setTableNavbarTabIndex(index);
         }}
       />
