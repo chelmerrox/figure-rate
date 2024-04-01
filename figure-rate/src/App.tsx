@@ -1,5 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Disclaimer from "./components/Disclaimer";
 import HeadingOne from "./components/HeadingOne";
 import TableNavbarTabs from "./components/TableNavbarTabs";
 import TermDepositInterestRates from "./components/TermDepositInterestRates";
@@ -182,6 +183,7 @@ function App() {
   return (
     <>
       <Navbar imgSrcPath={figureRateLogo} navMenuItems={menuItems} />
+      <Disclaimer currentYear={currentYear} />
       <HeadingOne />
       <TableNavbarTabs
         navbarTabs={tableNavbarTabsItems}

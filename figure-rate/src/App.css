@@ -19,6 +19,10 @@
   background-color: #8c52ff;
 }
 
+.bg-light-blue {
+  background-color: #cfe2ff !important;
+}
+
 .font-purple {
   color:#8c52ff;
 }
