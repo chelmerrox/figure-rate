@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+/* Re-usable styles as classes & ids */
+.league-spartan-font {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 65px;
+  color: #484646;
+}
+
+.btn-purple {
+  background-color: #8c52ff !important;
+  color: white !important;
+}
+
+.bg-purple {
+  background-color: #8c52ff;
+}
+
+.bg-light-blue {
+  background-color: #cfe2ff !important;
+}
+
+.font-purple {
+  color:#8c52ff;
+}
+
+.border-purple-rounded {
+  border: 1px solid #8c52ff;
+  border-radius: 0.375rem;
+}
+
+/* Styling for components/sections */
+.navbar-nav .nav-link.active {
+  color: #8c52ff !important;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-item:hover {
+  background-color: #f0f0f0;
+  font-weight: 500;
+}
+
+.nav-search-btn:hover {
+  background-color: white !important;
+  color: #8c52ff !important;
+  border: 1px solid #8c52ff !important;
+}
+
+/* Styling for navbar tabs above table */
+.nav-pills .nav-link.active {
+  color: #ffffff !important;
+  background-color: #8c52ff !important;
+}
+
+.nav-pills .nav-link {
+  color: #8c52ff;
+}
+
+@media only screen and (min-width: 992px){
+  .navbar-nav .nav-item:after {
+    content: "";
+    position: absolute;
+    background-color: #8c52ff;
+    height: 3px;
+    width: 0;
+    left: 10;
+    bottom: 36px;
+    transition: 0.3s;
+  }
+  
+  .navbar-nav .nav-item:hover {
+    color: #8c52ff;
+  }
+  
+  .navbar-nav .nav-item:hover:after {
+    width: 7%;
+  }
+}
