@@ -17,7 +17,7 @@ function Disclaimer({ currentYear }: DisclaimerProps) {
               aria-controls="collapseOne"
             >
               <strong>
-                Legal Disclaimer
+                ⚠️ Legal Disclaimer
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
