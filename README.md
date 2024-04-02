@@ -11,6 +11,17 @@
 
 > Figure Rate is a service & tool that compares interest rates from different financial institutions in Fiji.
 
+## ⚠️ Disclaimer
+
+### Terms & conditions
+
+The interest rates displayed on this site are sourced from the respective financial institutions' websites and are accurate as of the year 2024. However, please be aware that these rates are subject to change without notice and may vary depending on various factors. We strongly advise individuals to visit the official websites of the financial institutions mentioned for the most up-to-date and accurate information regarding their current interest rates, terms, and conditions. While we strive to provide accurate and reliable information, we cannot guarantee the completeness, accuracy, or timeliness of the data presented on this site. Therefore, users should exercise caution and conduct their own research or consult with financial experts
+before making any financial decisions based on the information provided here. By accessing and using this site, you acknowledge
+and agree that the information provided is for informational purposes only and should not be construed as financial advice or
+a recommendation to engage in any specific financial transactions or investments. We disclaim any liability for any
+loss or damage arising directly or indirectly from the use of or reliance on the information presented on this site. Your use of
+this site constitutes your acceptance of these terms and conditions. If you do not agree with these terms, please refrain from using this site.
+
 ## 📸 Preview
 
 ![screenshot](./figure-rate/src/assets/screenshot-1.png)
