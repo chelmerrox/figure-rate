@@ -57,7 +57,7 @@ $ git clone git@github.com:chelmerrox/figure.git
 2. Change directory/Go into the repository with the command below.
 
 ```bash
-$ cd figure/
+$ cd figure-rate/
 
 ```
 
