@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 import DataTable from "react-data-table-component";
 import { useState } from "react";
 

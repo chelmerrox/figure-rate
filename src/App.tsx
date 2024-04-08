@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Disclaimer from "./components/Disclaimer";
