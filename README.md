@@ -35,7 +35,7 @@ this site constitutes your acceptance of these terms and conditions. If you do n
 
 ## 💻 Live Demo
 
-<a href="https://raw.githack.com/chelmerrox/figure/development/index.html">Figure Rate</a>
+<a href="https://figure-rate.netlify.app/">Figure Rate</a>
 
 ## ⌨️ Getting Started
 
