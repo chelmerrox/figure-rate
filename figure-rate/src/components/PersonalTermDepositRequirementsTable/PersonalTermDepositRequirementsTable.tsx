@@ -1,33 +1,13 @@
 import DataTable from "react-data-table-component";
 import { useState } from "react";
 
-interface MoreInfoProps {
+interface PersonalTermDepositRequirementsTableProps {
   currentYear: Number;
 }
 
-function MoreInfo({ currentYear }: MoreInfoProps) {
-  /*
-  const websiteLinks = [
-    "https://www.anz.com/fiji/en/personal/savings-investing/retail-term-deposit/",
-    "https://www.bankofbaroda-fiji.com/personal-banking/personal-deposit-account/baroda-term-deposits",
-    "https://www.bsp.com.fj/personal-banking/retail-term-deposit/",
-    "https://www.creditcorp.com.fj/personal-term-deposit/",
-    "https://www.fdb.com.fj/yaubula-term-deposit/",
-    "https://fhut.com.fj/",
-    "https://www.hfc.com.fj/wp-content/uploads/2022/09/Term-Deposit.pdf",
-    "https://www.kontikifinance.com/shareholders/term-deposits/",
-    "https://merchantfinance.com.fj/investment/product-features/",
-    "https://www.westpac.com.fj/personal/bank-accounts/term-deposit/",
-  ];
-
-  
-  const renderWebsiteLink = (financialInstitutionID) => {
-    let text.innerHTML = ``;
-
-    websiteLinks.
-  };
-  */
-
+function PersonalTermDepositRequirementsTable({
+  currentYear,
+}: PersonalTermDepositRequirementsTableProps) {
   const columns = [
     {
       name: "#",
@@ -45,14 +25,49 @@ function MoreInfo({ currentYear }: MoreInfoProps) {
       sortable: true,
     },
     {
-      name: "For more information, please visit these websites.",
-      selector: (row) => row.financialInstitutionWebsiteLink,
+      name: "Minimum Deposit",
+      selector: (row) => row.minimumDepositAmount,
       sortable: true,
-      cell: (row) => (
-        <a href={row.financialInstitutionWebsiteLink} target="_blank">
-          {row.financialInstitutionName + " website"}
-        </a>
-      ),
+    },
+    {
+      name: "Maximum Deposit",
+      selector: (row) => row.maximumDepositAmount,
+      sortable: true,
+    },
+    {
+      name: "More than maximum deposit",
+      selector: (row) => row.rulesForDepositsAboveMaximumAmount,
+      sortable: true,
+    },
+    {
+      name: "Deposit Method",
+      selector: (row) => row.depositMethod,
+      sortable: true,
+    },
+    {
+      name: "Term",
+      selector: (row) => row.term,
+      sortable: true,
+    },
+    {
+      name: "Interest Payment",
+      selector: (row) => row.interestPayment,
+      sortable: true,
+    },
+    {
+      name: "Maturity Options",
+      selector: (row) => row.maturityOptions,
+      sortable: true,
+    },
+    {
+      name: "Early Withdrawals",
+      selector: (row) => row.earlyWithdrawals,
+      sortable: true,
+    },
+    {
+      name: "Benefits",
+      selector: (row) => row.benefits,
+      sortable: true,
     },
   ];
 
@@ -61,70 +76,141 @@ function MoreInfo({ currentYear }: MoreInfoProps) {
       financialInstitutionID: 1,
       financialInstitutionName: "ANZ",
       productName: "Personal Term Deposit",
-      financialInstitutionWebsiteLink:
-        "https://www.anz.com/fiji/en/personal/savings-investing/retail-term-deposit/",
+      minimumDepositAmount: "$500",
+      maximumDepositAmount: "$100,000",
+      rulesForDepositsAboveMaximumAmount: "-",
+      depositMethod: "-",
+      term: "-",
+      interestPayment: "-",
+      maturityOptions: "-",
+      earlyWithdrawals: "-",
+      benefits: "-",
     },
     {
       financialInstitutionID: 2,
       financialInstitutionName: "Bank of Baroda",
       productName: "Personal Term Deposit",
-      financialInstitutionWebsiteLink:
-        "https://www.bankofbaroda-fiji.com/personal-banking/personal-deposit-account/baroda-term-deposits",
+      minimumDepositAmount: "$500",
+      maximumDepositAmount: "-",
+      rulesForDepositsAboveMaximumAmount: "-",
+      depositMethod: "-",
+      term: "-",
+      interestPayment: "-",
+      maturityOptions: "-",
+      earlyWithdrawals: "-",
+      benefits: "-",
     },
     {
       financialInstitutionID: 3,
       financialInstitutionName: "Bank of South Pacific",
       productName: "Personal Term Deposit",
-      financialInstitutionWebsiteLink:
-        "https://www.bsp.com.fj/personal-banking/retail-term-deposit/",
+      minimumDepositAmount: "$1,000",
+      maximumDepositAmount: "-",
+      rulesForDepositsAboveMaximumAmount: "-",
+      depositMethod: "-",
+      term: "-",
+      interestPayment: "-",
+      maturityOptions: "-",
+      earlyWithdrawals: "-",
+      benefits: "-",
     },
     {
       financialInstitutionID: 4,
       financialInstitutionName: "Credit Corporation Fiji",
       productName: "Personal Term Deposit",
-      financialInstitutionWebsiteLink:
-        "https://www.creditcorp.com.fj/personal-term-deposit/",
+      minimumDepositAmount: "-",
+      maximumDepositAmount: "-",
+      rulesForDepositsAboveMaximumAmount: "-",
+      depositMethod: "-",
+      term: "-",
+      interestPayment: "-",
+      maturityOptions: "-",
+      earlyWithdrawals: "-",
+      benefits: "-",
     },
     {
       financialInstitutionID: 5,
       financialInstitutionName: "Fiji Development Bank",
       productName: "Yaubula Term Deposit",
-      financialInstitutionWebsiteLink:
-        "https://www.fdb.com.fj/yaubula-term-deposit/",
+      minimumDepositAmount: "$25,000",
+      maximumDepositAmount: "No limit",
+      rulesForDepositsAboveMaximumAmount: "-",
+      depositMethod: "-",
+      term: "-",
+      interestPayment: "-",
+      maturityOptions: "-",
+      earlyWithdrawals: "-",
+      benefits: "-",
     },
     {
       financialInstitutionID: 6,
       financialInstitutionName: "Fijian Holdings Unit Trust",
       productName: "Personal Term Deposit",
-      financialInstitutionWebsiteLink: "https://fhut.com.fj/",
+      minimumDepositAmount: "-",
+      maximumDepositAmount: "-",
+      rulesForDepositsAboveMaximumAmount: "-",
+      depositMethod: "-",
+      term: "-",
+      interestPayment: "-",
+      maturityOptions: "-",
+      earlyWithdrawals: "-",
+      benefits: "-",
     },
     {
       financialInstitutionID: 7,
-      financialInstitutionName: "Home Finance Company Limited",
+      financialInstitutionName: "Home Finance Company Bank",
       productName: "Personal Term Deposit",
-      financialInstitutionWebsiteLink:
-        "https://www.hfc.com.fj/wp-content/uploads/2022/09/Term-Deposit.pdf",
+      minimumDepositAmount: "$500",
+      maximumDepositAmount: "$250,000",
+      rulesForDepositsAboveMaximumAmount: "-",
+      depositMethod: "-",
+      term: "-",
+      interestPayment: "-",
+      maturityOptions: "-",
+      earlyWithdrawals: "-",
+      benefits: "-",
     },
     {
       financialInstitutionID: 8,
       financialInstitutionName: "Kontiki Finance",
       productName: "Personal Term Deposit",
-      financialInstitutionWebsiteLink:
-        "https://www.kontikifinance.com/shareholders/term-deposits/",
+      minimumDepositAmount: "$5,000",
+      maximumDepositAmount: "$250,000",
+      rulesForDepositsAboveMaximumAmount: "-",
+      depositMethod: "-",
+      term: "-",
+      interestPayment: "-",
+      maturityOptions: "-",
+      earlyWithdrawals: "-",
+      benefits: "-",
     },
     {
       financialInstitutionID: 9,
       financialInstitutionName: "Merchant Finance Limited",
       productName: "Personal Term Deposit",
-      financialInstitutionWebsiteLink:
-        "https://merchantfinance.com.fj/investment/product-features/",
+      minimumDepositAmount: "$500",
+      maximumDepositAmount: "$250,000",
+      rulesForDepositsAboveMaximumAmount: "-",
+      depositMethod: "-",
+      term: "-",
+      interestPayment: "-",
+      maturityOptions: "-",
+      earlyWithdrawals: "-",
+      benefits: "-",
     },
     {
       financialInstitutionID: 10,
       financialInstitutionName: "Westpac Fiji",
       productName: "Personal Term Deposit",
-      financialInstitutionWebsiteLink:
-        "https://www.westpac.com.fj/personal/bank-accounts/term-deposit/",
+      minimumDepositAmount: "$1,000",
+      maximumDepositAmount: "-",
+      rulesForDepositsAboveMaximumAmount: "-",
+      depositMethod: "-",
+      term: "-",
+      interestPayment: "-",
+      maturityOptions: "-",
+      earlyWithdrawals: "-",
+      benefits: "-",
     },
   ];
 
@@ -141,6 +227,11 @@ function MoreInfo({ currentYear }: MoreInfoProps) {
       },
     },
   };
+
+  // A super simple expandable component.
+  const ExpandedComponent = ({ data }) => (
+    <pre>{JSON.stringify(data, null, 2)}</pre>
+  );
 
   const [records, setRecords] = useState(data);
 
@@ -179,7 +270,7 @@ function MoreInfo({ currentYear }: MoreInfoProps) {
 
   return (
     <>
-      <div className="container my-5" id="moreinfotable">
+      <div className="container my-5" id="minimumrequirementstable">
         <div className="input-group d-flex flex-row justify-content-end">
           <input
             type="search"
@@ -204,8 +295,7 @@ function MoreInfo({ currentYear }: MoreInfoProps) {
         <DataTable
           className="table"
           title={
-            "For more information on Personal Term Deposit Interest Rates in " +
-            currentYear
+            "Minimum Requirements for Personal Term Deposit in " + currentYear
           }
           columns={columns}
           data={records}
@@ -213,10 +303,12 @@ function MoreInfo({ currentYear }: MoreInfoProps) {
           selectableRows
           pagination
           customStyles={customStyles}
+          expandableRows
+          expandableRowsComponent={ExpandedComponent}
         />
       </div>
     </>
   );
 }
 
-export default MoreInfo;
+export default PersonalTermDepositRequirementsTable;

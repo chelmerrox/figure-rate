@@ -1,13 +1,13 @@
 import DataTable from "react-data-table-component";
 import { useState } from "react";
 
-interface TermDepositInterestRatesProps {
+interface PersonalTermDepositRatesTableProps {
   currentYear: Number;
 }
 
-function TermDepositInterestRates({
+function PersonalTermDepositRatesTable({
   currentYear,
-}: TermDepositInterestRatesProps) {
+}: PersonalTermDepositRatesTableProps) {
   const columns = [
     {
       name: "#",
@@ -548,7 +548,7 @@ function TermDepositInterestRates({
   );
 }
 
-export default TermDepositInterestRates;
+export default PersonalTermDepositRatesTable;
 
 /*
 {tableBody.map((row, i) => (

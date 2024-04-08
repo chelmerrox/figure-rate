@@ -59,7 +59,7 @@ function Disclaimer({ currentYear }: DisclaimerProps) {
                 a recommendation to engage in any specific financial
                 transactions or investments. We disclaim any liability for any
                 loss or damage arising directly or indirectly from the use of or
-                reliance on the information presented on this site.Your use of
+                reliance on the information presented on this site. Your use of
                 this site constitutes your acceptance of these terms and
                 conditions. If you do not agree with these terms, please refrain
                 from using this site.
