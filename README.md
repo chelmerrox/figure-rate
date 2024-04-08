@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./figure-rate/src/assets/figure-rate-logo-1.png" width="150" height="150" alt="Figure Rate Logo" />
+  <img src="./src/assets/figure-rate-logo-1.png" width="150" height="150" alt="Figure Rate Logo" />
   <p style="margin-top: 15px; font-size: 17px;">🔍 Comparing interest rates from Fiji's financial institutions made easy! 👌</p>
   <div style="display: flex; justify-content: center;">
     <img src="https://img.shields.io/badge/npm->=_10.2.4-blue" width="105" height="20" alt="npm version" style="margin-right: 10px;" />
@@ -24,7 +24,7 @@ this site constitutes your acceptance of these terms and conditions. If you do n
 
 ## 📸 Preview
 
-![screenshot](./figure-rate/src/assets/screenshot-1.png)
+![screenshot](./src/assets/screenshot-1.png)
 
 ## 🔨 Built With
 
