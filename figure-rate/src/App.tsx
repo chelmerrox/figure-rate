@@ -5,7 +5,7 @@ import HeadingOne from "./components/HeadingOne";
 import TableNavbarTabs from "./components/TableNavbarTabs";
 import PersonalTermDepositRatesTable from "./components/PersonalTermDepositRatesTable/PersonalTermDepositRatesTable";
 import PersonalTermDepositRequirementsTable from "./components/PersonalTermDepositRequirementsTable/PersonalTermDepositRequirementsTable";
-import MoreInfo from "./components/PersonalTermDepositMoreInfoTable/PersonalTermDepositMoreInfoTable";
+import PersonalTermDepositMoreInfoTable from "./components/PersonalTermDepositMoreInfoTable/PersonalTermDepositMoreInfoTable";
 import Footer from "./components/Footer";
 import figureRateLogo from "./assets/figure-rate-logo-1.png";
 import figureRateLogoFooter from "./assets/figure-rate-logo-footer.png";
@@ -69,7 +69,9 @@ function App() {
       {tableNavbarTabIndex === 1 && (
         <PersonalTermDepositRequirementsTable currentYear={currentYear} />
       )}
-      {tableNavbarTabIndex === 2 && <MoreInfo currentYear={currentYear} />}
+      {tableNavbarTabIndex === 2 && (
+        <PersonalTermDepositMoreInfoTable currentYear={currentYear} />
+      )}
       <Footer
         footerColumns={footerColumns}
         figureRateLogoFilePath={figureRateLogoFooter}
