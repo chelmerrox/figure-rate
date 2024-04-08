@@ -61,14 +61,7 @@ $ cd figure-rate/
 
 ```
 
-3. Change directory into figure-rate.
-
-```bash
-$ cd figure-rate/
-
-```
-
-4. Run the command below to view the site on your local machine.
+3. Run the command below to view the site on your local machine.
 
 ```bash
 $ npm run dev
