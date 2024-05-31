@@ -50,7 +50,7 @@ From your command line, do the folowing steps below:
 
 ```bash
 # Clone this repository
-$ git clone git@github.com:chelmerrox/figure.git
+$ git clone git@github.com:chelmerrox/figure-rate.git
 
 ```
 
