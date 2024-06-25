@@ -62,47 +62,73 @@ function PersonalTermDepositMoreInfoTable({
     },
     {
       financialInstitutionID: 4,
+      financialInstitutionName: "BRED Bank Fiji",
+      productName: "Personal Term Deposit",
+      financialInstitutionWebsiteLink:
+        "https://www.bred.com.fj/index.php/personal/term-deposits",
+    },
+    {
+      financialInstitutionID: 5,
       financialInstitutionName: "Credit Corporation Fiji",
       productName: "Personal Term Deposit",
       financialInstitutionWebsiteLink:
         "https://www.creditcorp.com.fj/personal-term-deposit/",
     },
     {
-      financialInstitutionID: 5,
+      financialInstitutionID: 6,
+      financialInstitutionName: "Dominion Finance PTE Limited",
+      productName: "Personal Term Deposit",
+      financialInstitutionWebsiteLink: "https://dominionfinance.com.fj/",
+    },
+    {
+      financialInstitutionID: 7,
       financialInstitutionName: "Fiji Development Bank",
       productName: "Yaubula Term Deposit",
       financialInstitutionWebsiteLink:
         "https://www.fdb.com.fj/yaubula-term-deposit/",
     },
     {
-      financialInstitutionID: 6,
+      financialInstitutionID: 8,
       financialInstitutionName: "Fijian Holdings Unit Trust",
       productName: "Personal Term Deposit",
       financialInstitutionWebsiteLink: "https://fhut.com.fj/",
     },
     {
-      financialInstitutionID: 7,
+      financialInstitutionID: 9,
+      financialInstitutionName: "Handy Finance Fiji",
+      productName: "Personal Term Deposit",
+      financialInstitutionWebsiteLink: "https://www.handyfinance.com.fj/",
+    },
+    {
+      financialInstitutionID: 10,
       financialInstitutionName: "Home Finance Company Limited",
       productName: "Personal Term Deposit",
       financialInstitutionWebsiteLink:
         "https://www.hfc.com.fj/wp-content/uploads/2022/09/Term-Deposit.pdf",
     },
     {
-      financialInstitutionID: 8,
+      financialInstitutionID: 11,
       financialInstitutionName: "Kontiki Finance",
       productName: "Personal Term Deposit",
       financialInstitutionWebsiteLink:
         "https://www.kontikifinance.com/shareholders/term-deposits/",
     },
     {
-      financialInstitutionID: 9,
+      financialInstitutionID: 12,
       financialInstitutionName: "Merchant Finance Limited",
       productName: "Personal Term Deposit",
       financialInstitutionWebsiteLink:
         "https://merchantfinance.com.fj/investment/product-features/",
     },
     {
-      financialInstitutionID: 10,
+      financialInstitutionID: 13,
+      financialInstitutionName: "Poseidon Finance",
+      productName: "Personal Term Deposit",
+      financialInstitutionWebsiteLink:
+        "https://www.facebook.com/p/Poseidon-Finance-100071406567026/",
+    },
+    {
+      financialInstitutionID: 14,
       financialInstitutionName: "Westpac Fiji",
       productName: "Personal Term Deposit",
       financialInstitutionWebsiteLink:
