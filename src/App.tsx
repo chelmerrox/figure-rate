@@ -15,7 +15,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { useState } from "react";
 
 function App() {
-  let currentYear = new Date().getFullYear();
+  //let currentYear = new Date().getFullYear();
 
   let menuItems = {
     items: ["Personal Term Deposit", "About", "Contact"],
